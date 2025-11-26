@@ -72,8 +72,8 @@ sections:
     design:
       columns: '1'
       spacing:
-        padding: 0rem
-        margin: 0rem
+        padding: 0.5rem
+
 
   - block: cta-card
     demo: true # Only display this section in the Hugo Blox Builder demo site
