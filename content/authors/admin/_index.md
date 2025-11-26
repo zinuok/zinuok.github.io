@@ -29,28 +29,6 @@ profiles:
     label: "Email"
 
 
-
-about: "Ph.D. student in Robotics at KAIST, working on event-based computer vision and autonomous driving."
-
-interests:
-  - Computer Vision and Deep Learning for Robotics, Autonomous Driving and Virtual Reality
-  - Video & Image Enhancement (Deblurring, Frame Interpolation, Super-resolution)
-  - Autonomous Driving (Stereo/MVS, Segmentation, Detection)
-  - Event Camera Applications
-
-experience:
-  - position: Ph.D. student, Robotics
-    company_name: KAIST
-    date_start: 2022-03-01
-    date_end: ""
-  - position: M.S. student, Robotics
-    company_name: KAIST
-    date_start: 2020-09-01
-    date_end: 2022-02-28
-  - position: B.S. student, Mechanical Engineering
-    company_name: KAIST
-    date_start: 2016-03-01
-    date_end: 2020-08-31
 ---
 
 ## Research Interests
@@ -64,7 +42,7 @@ experience:
   - Application of Event Camera for Various Tasks  
 
 ## Experience
-
+I am currently pursuing my Ph.D. at Korea Advanced Institute of Science and Technology (KAIST) under the supervision of Professor Kuk-Jin Yoon.
 - **2022.03 – Present** · Ph.D. student, Robotics, KAIST  
 - **2020.09 – 2022.02** · M.S. student, Robotics, KAIST  
 - **2016.03 – 2020.08** · B.S. student, Mechanical Engineering, KAIST  
@@ -79,20 +57,3 @@ experience:
 - **MBZIRC Final Team, December 2022**  
   Finalist team in the Mohamed Bin Zayed International Robotics Challenge (MBZIRC).
 
-## Academic Service
-
-I have been serving the research community as a reviewer for:
-
-- 2021 · IEEE Transactions on Instrumentation & Measurement  
-- 2023 · AAAI Conference on Artificial Intelligence (AAAI)  
-- 2023 · International Conference on Computer Vision (ICCV)  
-- 2024 · AAAI Conference on Artificial Intelligence (AAAI)  
-- 2024 · IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)  
-- 2024 · IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)  
-- 2024 · European Conference on Computer Vision (ECCV)
-- 2025 · AAAI Conference on Artificial Intelligence (AAAI)  
-- 2025 · IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
-- 2025 · IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)  
-- 2025 · International Conference on Computer Vision (ICCV) (Outstanding Reviewers)
-- 2025 · Conference on Neural Information Processing Systems (NeurIPS) (Top Reviewers)
-- 2026 · AAAI Conference on Artificial Intelligence (AAAI)  
