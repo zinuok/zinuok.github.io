@@ -10,15 +10,25 @@ avatar: "avatar.jpg"
 
 email: "gnsgnsgml@kaist.ac.kr"
 
+
 profiles:
-  - icon: "github"
+  - icon: "brands/github"
     url: "https://github.com/Chohoonhee"
-  - icon: "google-scholar"
+    label: "GitHub"
+
+  - icon: "academicons/google-scholar"
     url: "https://scholar.google.com/citations?user=8h-hLRsAAAAJ"
-  - icon: "linkedin"
+    label: "Google Scholar"
+
+  - icon: "brands/linkedin"
     url: "https://www.linkedin.com/in/hoonheecho"
-  - icon: "envelope"        # 테마 문서에선 envelope/at-symbol 등
+    label: "LinkedIn"
+
+  - icon: "at-symbol"
     url: "mailto:gnsgnsgml@kaist.ac.kr"
+    label: "Email"
+
+
 
 about: "Ph.D. student in Robotics at KAIST, working on event-based computer vision and autonomous driving."
 
