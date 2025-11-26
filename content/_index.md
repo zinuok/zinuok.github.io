@@ -49,8 +49,8 @@ sections:
           - publication
         featured_only: true               # featured=true 인 논문만
     design:
-      view: card                          # ✅ 핵심: article-grid → card
-      columns: 3                          # 데스크탑에서 3개 카드씩
+      view: citation                          # ✅ 핵심: article-grid → card
+      columns: 2                          # 데스크탑에서 3개 카드씩
       spacing:
         padding: 1.5rem                   # 위아래 여백 조금
   - block: collection
