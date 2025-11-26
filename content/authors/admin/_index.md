@@ -1,34 +1,30 @@
 ---
-name: Hoonhee Cho
-role: Ph.D. Student
+name: "Hoonhee Cho"
+role: "Ph.D. Student"
 bio: >
   I am currently pursuing my Ph.D. at Korea Advanced Institute of Science
   and Technology (KAIST) under the supervision of Professor Kuk-Jin Yoon.
 
-avatar: avatar.jpg
+avatar: "avatar.jpg"
+email: "gnsgnsgml@kaist.ac.kr"
 
-email: gnsgnsgml@kaist.ac.kr
-
-# 상단에 뜰 소셜 링크들
 social:
   - icon: github
     icon_pack: fab
     link: https://github.com/Chohoonhee
   - icon: linkedin
     icon_pack: fab
-    link: https://www.linkedin.com   # 실제 URL로 변경
+    link: https://www.linkedin.com
   - icon: envelope
     icon_pack: fas
     link: mailto:gnsgnsgml@kaist.ac.kr
 
-# Research interests (구글 사이트 내용 그대로)
 interests:
   - Computer Vision and Deep Learning for Robotics, Autonomous Driving and Virtual Reality
   - Video & Image Enhancement (Deblurring, Frame Interpolation, Super-resolution)
   - Autonomous Driving (Stereo/MVS, Segmentation, Detection)
   - Event Camera Applications
 
-# Experience (구글 Sites의 Experiences 섹션)
 experience:
   - position: Ph.D. student, Robotics
     company_name: KAIST
@@ -42,8 +38,6 @@ experience:
     company_name: KAIST
     date_start: 2016-03-01
     date_end: 2020-08-31
-
-# Honors & News / Academic Service는 아래 markdown에서 작성
 ---
 
 ## Research Interests
