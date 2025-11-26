@@ -35,7 +35,7 @@ sections:
       title: Recent Publications
       filters:
         folders:
-          - publications
+          - publication
         featured_only: true
     design:
       view: article-grid
@@ -46,7 +46,7 @@ sections:
       text: ''
       filters:
         folders:
-          - publications
+          - publication
         exclude_featured: false
     design:
       view: citation
@@ -55,7 +55,7 @@ sections:
       title: '📚 Academic Service'
       subtitle: ''
       text: |-
-        <div style="font-size:0.9rem;">
+        <div style="font-size:1.1rem;">
         I have been serving the research community as a reviewer for:
 
         <ul style="list-style-position: outside; padding-left: 1.5rem; white-space: nowrap;">
@@ -79,28 +79,32 @@ sections:
       spacing:
         padding: 0.5rem
 
-  
   - block: markdown
     content:
       title: '🏅 Honors & News'
       subtitle: ''
       text: |-
-        I have been serving the research community as a reviewer for:
-
-        <ul style="list-style-position: outside; padding-left: 1.5rem; white-space: nowrap;">
-          - **IEEE SPECTRUM News, August 2021**  
-            Event-based Omnidirectional Multi-view Stereo (EOMVS) was introduced in IEEE Spectrum,  
+        <div style="font-size:0.9rem;">
+        <ul style="list-style-position: outside; padding-left: 1.5rem;">
+          <li>
+            <strong>IEEE SPECTRUM News, August 2021</strong><br>
+            Event-based Omnidirectional Multi-view Stereo (EOMVS) was introduced in IEEE Spectrum,
             “This Camera Can ‘See’ the Bigger Picture: Researchers’ new camera spots fast-moving objects over a wide angle of view.”
-          - **Vision Systems Design Main News, November 2021**  
+          </li>
+          <li>
+            <strong>Vision Systems Design Main News, November 2021</strong><br>
             EOMVS introduced as a main news article in Vision Systems Design.
-          - **MBZIRC Final Team, December 2022**  
+          </li>
+          <li>
+            <strong>MBZIRC Final Team, December 2022</strong><br>
             Finalist team in the Mohamed Bin Zayed International Robotics Challenge (MBZIRC).
+          </li>
         </ul>
+        </div>
     design:
       columns: '1'
       spacing:
         padding: 0.5rem
-
 
 
   - block: cta-card
