@@ -5,7 +5,7 @@ bio: >
   I am currently pursuing my Ph.D. at Korea Advanced Institute of Science
   and Technology (KAIST) under the supervision of Professor Kuk-Jin Yoon.
 
-avatar: hoonhee.jpg
+avatar: avatar.jpg
 
 email: gnsgnsgml@kaist.ac.kr
 
