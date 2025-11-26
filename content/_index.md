@@ -55,7 +55,7 @@ sections:
       title: '📚 Academic Service'
       subtitle: ''
       text: |-
-        <div style="font-size:1.1rem;">
+        <div style="font-size:1.0rem;">
         I have been serving the research community as a reviewer for:
 
         <ul style="list-style-position: outside; padding-left: 1.5rem; white-space: nowrap;">
@@ -84,8 +84,8 @@ sections:
       title: '🏅 Honors & News'
       subtitle: ''
       text: |-
-        <div style="font-size:0.9rem;">
-        <ul style="list-style-position: outside; padding-left: 1.5rem;">
+        <div style="font-size:1.0rem;">
+        <ul style="list-style-position: outside; padding-left: 1.5rem; white-space: nowrap;">
           <li>
             <strong>IEEE SPECTRUM News, August 2021</strong><br>
             Event-based Omnidirectional Multi-view Stereo (EOMVS) was introduced in IEEE Spectrum,
@@ -105,6 +105,7 @@ sections:
       columns: '1'
       spacing:
         padding: 0.5rem
+
 
 
   - block: cta-card
