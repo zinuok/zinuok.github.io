@@ -1,23 +1,26 @@
 ---
-name: "Hoonhee Cho"
+title: "Hoonhee Cho"        # ← 여기!
+first_name: "Hoonhee"
+last_name: "Cho"
+
 role: "Ph.D. Student"
-bio: >
-  I am currently pursuing my Ph.D. at Korea Advanced Institute of Science
-  and Technology (KAIST) under the supervision of Professor Kuk-Jin Yoon.
+
 
 avatar: "avatar.jpg"
+
 email: "gnsgnsgml@kaist.ac.kr"
 
-social:
-  - icon: github
-    icon_pack: fab
-    link: https://github.com/Chohoonhee
-  - icon: linkedin
-    icon_pack: fab
-    link: https://www.linkedin.com
-  - icon: envelope
-    icon_pack: fas
-    link: mailto:gnsgnsgml@kaist.ac.kr
+profiles:
+  - icon: "github"
+    url: "https://github.com/Chohoonhee"
+  - icon: "google-scholar"
+    url: "https://scholar.google.com/citations?user=8h-hLRsAAAAJ"
+  - icon: "linkedin"
+    url: "https://www.linkedin.com"
+  - icon: "envelope"        # 테마 문서에선 envelope/at-symbol 등
+    url: "mailto:gnsgnsgml@kaist.ac.kr"
+
+bio: "Ph.D. student in Robotics at KAIST, working on event-based computer vision and autonomous driving."
 
 interests:
   - Computer Vision and Deep Learning for Robotics, Autonomous Driving and Virtual Reality
