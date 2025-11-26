@@ -16,11 +16,11 @@ profiles:
   - icon: "google-scholar"
     url: "https://scholar.google.com/citations?user=8h-hLRsAAAAJ"
   - icon: "linkedin"
-    url: "https://www.linkedin.com"
+    url: "https://www.linkedin.com/in/hoonheecho"
   - icon: "envelope"        # 테마 문서에선 envelope/at-symbol 등
     url: "mailto:gnsgnsgml@kaist.ac.kr"
 
-bio: "Ph.D. student in Robotics at KAIST, working on event-based computer vision and autonomous driving."
+about: "Ph.D. student in Robotics at KAIST, working on event-based computer vision and autonomous driving."
 
 interests:
   - Computer Vision and Deep Learning for Robotics, Autonomous Driving and Virtual Reality
