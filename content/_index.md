@@ -70,7 +70,10 @@ sections:
         - 2025 · Conference on Neural Information Processing Systems (NeurIPS) (Top Reviewers)
         - 2026 · AAAI Conference on Artificial Intelligence (AAAI)  
     design:
-      columns: '2'
+      columns: '1'
+      spacing:
+        padding: 0rem
+        margin: 0rem
 
   - block: cta-card
     demo: true # Only display this section in the Hugo Blox Builder demo site
