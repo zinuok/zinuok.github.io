@@ -54,15 +54,12 @@ experience:
 ---
 
 ## Research Interests
-
-- Computer Vision and Deep Learning for Robotics, Autonomous Driving and Virtual Reality  
 - **Video & Image Enhancement**
   - Image/Video Deblurring  
   - Video Frame Interpolation  
-  - Video Super-Resolution  
 - **Autonomous Driving**
-  - Stereo Matching, Multi-View Stereo  
-  - Semantic Segmentation, Object Detection  
+  - Stereo Matching, Semantic Segmentation, Object Detection
+  - End-to-end Autonomous Driving  
 - **Event Camera**
   - Application of Event Camera for Various Tasks  
 
@@ -93,3 +90,9 @@ I have been serving the research community as a reviewer for:
 - 2024 · IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)  
 - 2024 · IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)  
 - 2024 · European Conference on Computer Vision (ECCV)
+- 2025 · AAAI Conference on Artificial Intelligence (AAAI)  
+- 2025 · IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
+- 2025 · IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)  
+- 2025 · International Conference on Computer Vision (ICCV) (Outstanding Reviewers)
+- 2025 · Conference on Neural Information Processing Systems (NeurIPS) (Top Reviewers)
+- 2026 · AAAI Conference on Artificial Intelligence (AAAI)  
