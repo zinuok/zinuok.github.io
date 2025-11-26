@@ -1,16 +1,16 @@
 ---
 # Display name
-title: Alex Johnson
+title: Hoonhee Cho
 
 # Name pronunciation (optional)
 name_pronunciation: ''
 
 # Full name (for SEO)
-first_name: Alex
-last_name: Johnson
+first_name: Hoonhee
+last_name: Cho
 
 # Pronouns (optional)
-pronouns: he/him
+pronouns: Ph.D.
 
 # Status emoji
 status:
@@ -23,12 +23,12 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Senior AI Research Scientist
+role: Ph.D. Candidate
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: Meta AI
-    url: https://ai.meta.com/
+  - name: VILAB KAIST
+    url: 
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
@@ -48,19 +48,18 @@ profiles:
     url: https://orcid.org/0000-0002-1825-0097
 
 interests:
-  - Large Language Models
   - Computer Vision
-  - Reinforcement Learning
-  - AI Ethics
+  - Event Camera
+  - Autonomous Driving
 
 education:
-  - area: PhD Computer Science (AI Focus)
-    institution: Stanford University
+  - area: PhD Computer Science
+    institution: KAIST
     icon: ""
-    date_start: 2015-09-01
-    date_end: 2019-06-30
-    summary: |
-      Thesis on _Scaling Laws for Neural Language Models_. Supervised by Prof. Andrew Ng. Published 5 papers in NeurIPS and ICML, with 2 best paper awards.
+    date_start: 2020-09-01
+    date_end: ing
+    # summary: |
+    #   Thesis on _Scaling Laws for Neural Language Models_. Supervised by Prof. Andrew Ng. Published 5 papers in NeurIPS and ICML, with 2 best paper awards.
     button:
       text: 'Read Thesis'
       url: 'https://example.com/thesis.pdf'
