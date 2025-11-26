@@ -1,171 +1,88 @@
 ---
-# Display name
-title: Hoonhee Cho
+name: Hoonhee Cho
+role: Ph.D. Student
+bio: >
+  I am currently pursuing my Ph.D. at Korea Advanced Institute of Science
+  and Technology (KAIST) under the supervision of Professor Kuk-Jin Yoon.
 
-# Name pronunciation (optional)
-name_pronunciation: ''
+avatar: hoonhee.jpg
 
-# Full name (for SEO)
-first_name: Hoonhee
-last_name: Cho
+email: gnsgnsgml@kaist.ac.kr
 
-# Pronouns (optional)
-pronouns: Ph.D.
+# 상단에 뜰 소셜 링크들
+social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/Chohoonhee
+  - icon: linkedin
+    icon_pack: fab
+    link: https://www.linkedin.com   # 실제 URL로 변경
+  - icon: envelope
+    icon_pack: fas
+    link: mailto:gnsgnsgml@kaist.ac.kr
 
-# Status emoji
-status:
-  icon: 🚀
-
-# Is this the primary user of the site?
-superuser: true
-
-# Highlight the author in author lists? (true/false)
-highlight_name: true
-
-# Role/position/tagline
-role: Ph.D. Candidate
-
-# Organizations/Affiliations to display in Biography blox
-organizations:
-  - name: VILAB KAIST
-    url: 
-
-# Social network links
-# Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
-profiles:
-  - icon: at-symbol
-    url: 'mailto:alex.johnson@meta.com'
-    label: E-mail Me
-  - icon: brands/x
-    url: https://twitter.com/AlexAIResearch
-  - icon: brands/github
-    url: https://github.com/alexjohnsonai
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/in/alexjohnsonai/
-  - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=alexjohnson
-  - icon: academicons/orcid
-    url: https://orcid.org/0000-0002-1825-0097
-
+# Research interests (구글 사이트 내용 그대로)
 interests:
-  - Computer Vision
-  - Event Camera
-  - Autonomous Driving
+  - Computer Vision and Deep Learning for Robotics, Autonomous Driving and Virtual Reality
+  - Video & Image Enhancement (Deblurring, Frame Interpolation, Super-resolution)
+  - Autonomous Driving (Stereo/MVS, Segmentation, Detection)
+  - Event Camera Applications
 
-education:
-  - area: PhD Computer Science
-    institution: KAIST
-    icon: ""
+# Experience (구글 Sites의 Experiences 섹션)
+experience:
+  - position: Ph.D. student, Robotics
+    company_name: KAIST
+    date_start: 2022-03-01
+    date_end: ""
+  - position: M.S. student, Robotics
+    company_name: KAIST
     date_start: 2020-09-01
-    date_end: ing
-    # summary: |
-    #   Thesis on _Scaling Laws for Neural Language Models_. Supervised by Prof. Andrew Ng. Published 5 papers in NeurIPS and ICML, with 2 best paper awards.
-    button:
-      text: 'Read Thesis'
-      url: 'https://example.com/thesis.pdf'
-  - area: MS Computer Science
-    institution: Carnegie Mellon University
-    icon: ""
-    date_start: 2013-09-01
-    date_end: 2015-05-31
-    summary: |
-      GPA: 4.0/4.0
+    date_end: 2022-02-28
+  - position: B.S. student, Mechanical Engineering
+    company_name: KAIST
+    date_start: 2016-03-01
+    date_end: 2020-08-31
 
-      Specialized in machine learning and robotics.
-  - area: BS Computer Science
-    institution: MIT
-    icon: ""
-    date_start: 2009-09-01
-    date_end: 2013-05-31
-    summary: |
-      GPA: 3.9/4.0
-
-      Minored in Mathematics. President of AI Club.
-
-work:
-  - position: Senior AI Research Scientist
-    company_name: Meta AI
-    company_url: 'https://ai.meta.com/'
-    icon: ''
-    date_start: 2020-01-01
-    date_end: ''
-    summary: |2-
-      Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models. 50+ citations in 3 years.
-  - position: AI Research Intern
-    company_name: OpenAI
-    company_url: 'https://openai.com/'
-    icon: ''
-    date_start: 2019-06-01
-    date_end: 2019-12-31
-    summary: |
-      Worked on GPT-3 scaling. Co-authored paper on prompt engineering.
-
-# Skills
-# Add your own SVG icons to `assets/media/icons/`
-skills:
-  - name: Technical Skills
-    items:
-      - name: Python & PyTorch
-        description: ''
-        percent: 95
-        icon: code-bracket
-      - name: Machine Learning
-        description: ''
-        percent: 100
-        icon: chart-bar
-      - name: Cloud Computing (AWS/GCP)
-        description: ''
-        percent: 85
-        icon: cloud
-  - name: Hobbies
-    color: '#eeac02'
-    color_border: '#f0bf23'
-    items:
-      - name: Hiking in the Rockies
-        description: ''
-        percent: 80
-        icon: person-simple-walk
-      - name: Building Custom PCs
-        description: ''
-        percent: 90
-        icon: cpu-chip
-      - name: Sci-Fi Reading
-        description: ''
-        percent: 70
-        icon: book-open
-
-languages:
-  - name: English
-    percent: 100
-  - name: Spanish
-    percent: 50
-
-# Awards.
-#   Add/remove as many awards below as you like.
-#   Only `title`, `awarder`, and `date` are required.
-#   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
-awards:
-  - title: Best Paper Award
-    url: https://neurips.cc/
-    date: '2022-12-01'
-    awarder: NeurIPS
-    icon: hero/trophy
-    summary: |
-      Awarded for groundbreaking work on efficient training of large models.
-  - title: AI Innovation Grant
-    url: https://www.nsf.gov/
-    date: '2021-06-15'
-    awarder: National Science Foundation
-    icon: hero/currency-dollar
-    summary: |
-      $500,000 grant for research in ethical AI development.
-  - title: Outstanding PhD Thesis
-    url: https://www.stanford.edu/
-    date: '2019-06-30'
-    awarder: Stanford University
-    icon: hero/academic-cap
-    summary: |
-      Recognized for contributions to scaling laws in deep learning.
+# Honors & News / Academic Service는 아래 markdown에서 작성
 ---
 
-Alex Johnson is a Senior AI Research Scientist at Meta AI, where he leads groundbreaking work on large language models and multimodal systems. His research has been published in top conferences like NeurIPS and ICML, with over 10,000 citations. Alex is passionate about pushing the boundaries of AI while ensuring ethical development. Outside of work, he enjoys hiking in the Rockies, building custom PCs, and mentoring the next generation of AI talent.
+## Research Interests
+
+- Computer Vision and Deep Learning for Robotics, Autonomous Driving and Virtual Reality  
+- **Video & Image Enhancement**
+  - Image/Video Deblurring  
+  - Video Frame Interpolation  
+  - Video Super-Resolution  
+- **Autonomous Driving**
+  - Stereo Matching, Multi-View Stereo  
+  - Semantic Segmentation, Object Detection  
+- **Event Camera**
+  - Application of Event Camera for Various Tasks  
+
+## Experience
+
+- **2022.03 – Present** · Ph.D. student, Robotics, KAIST  
+- **2020.09 – 2022.02** · M.S. student, Robotics, KAIST  
+- **2016.03 – 2020.08** · B.S. student, Mechanical Engineering, KAIST  
+
+## Honors & News
+
+- **IEEE SPECTRUM News, August 2021**  
+  Event-based Omnidirectional Multi-view Stereo (EOMVS) was introduced in IEEE Spectrum,  
+  “This Camera Can ‘See’ the Bigger Picture: Researchers’ new camera spots fast-moving objects over a wide angle of view.”
+- **Vision Systems Design Main News, November 2021**  
+  EOMVS introduced as a main news article in Vision Systems Design.
+- **MBZIRC Final Team, December 2022**  
+  Finalist team in the Mohamed Bin Zayed International Robotics Challenge (MBZIRC).
+
+## Academic Service
+
+I have been serving the research community as a reviewer for:
+
+- 2021 · IEEE Transactions on Instrumentation & Measurement  
+- 2023 · AAAI Conference on Artificial Intelligence (AAAI)  
+- 2023 · International Conference on Computer Vision (ICCV)  
+- 2024 · AAAI Conference on Artificial Intelligence (AAAI)  
+- 2024 · IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)  
+- 2024 · IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)  
+- 2024 · European Conference on Computer Vision (ECCV)
