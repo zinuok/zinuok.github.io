@@ -29,17 +29,30 @@ sections:
       avatar:
         size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: circle # Options: circle (default), square, rounded
+  # - block: collection
+  #   id: papers
+  #   content:
+  #     title: Recent Publications
+  #     filters:
+  #       folders:
+  #         - publication
+  #       featured_only: true
+  #   design:
+  #     view: article-grid
+  #     columns: 3
   - block: collection
     id: papers
     content:
-      title: Recent Publications
+      title: Recent Publications        # 이름도 원하면 여기서 변경
       filters:
         folders:
           - publication
-        featured_only: true
+        featured_only: true               # featured=true 인 논문만
     design:
-      view: article-grid
-      columns: 3
+      view: card                          # ✅ 핵심: article-grid → card
+      columns: 3                          # 데스크탑에서 3개 카드씩
+      spacing:
+        padding: 1.5rem                   # 위아래 여백 조금
   - block: collection
     content:
       title: All Publications
