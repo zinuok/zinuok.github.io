@@ -44,17 +44,17 @@ sections:
   - block: collection
     id: papers
     content:
-      title: Featured Publications
+      title: Recent Publications
       filters:
         folders:
           - publications
         featured_only: true
     design:
       view: article-grid
-      columns: 2
+      columns: 4
   - block: collection
     content:
-      title: Recent Publications
+      title: All Publications
       text: ''
       filters:
         folders:
