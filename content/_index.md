@@ -55,6 +55,7 @@ sections:
       title: '📚 Academic Service'
       subtitle: ''
       text: |-
+        <div style="font-size:0.9rem;">
         I have been serving the research community as a reviewer for:
 
         <ul style="list-style-position: outside; padding-left: 1.5rem; white-space: nowrap;">
@@ -72,6 +73,7 @@ sections:
           <li>2025 · Conference on Neural Information Processing Systems (NeurIPS) (Top Reviewers)</li>
           <li>2026 · AAAI Conference on Artificial Intelligence (AAAI)</li>
         </ul>
+        </div>
     design:
       columns: '1'
       spacing:
