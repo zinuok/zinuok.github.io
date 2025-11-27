@@ -40,19 +40,31 @@ sections:
   #   design:
   #     view: article-grid
   #     columns: 3
+  # - block: collection
+  #   id: papers
+  #   content:
+  #     title: Recent Publications        # 이름도 원하면 여기서 변경
+  #     filters:
+  #       folders:
+  #         - publication
+  #       featured_only: true               # featured=true 인 논문만
+  #   design:
+  #     view: card                          # ✅ 핵심: article-grid → card
+  #     columns: 3                          # 데스크탑에서 3개 카드씩
+  #     spacing:
+  #       padding: 1.5rem                   # 위아래 여백 조금
   - block: collection
     id: papers
     content:
-      title: Recent Publications        # 이름도 원하면 여기서 변경
+      title: Featured Publications
       filters:
         folders:
           - publication
-        featured_only: true               # featured=true 인 논문만
+        featured_only: true
     design:
-      view: citation                          # ✅ 핵심: article-grid → card
-      columns: 2                          # 데스크탑에서 3개 카드씩
-      spacing:
-        padding: 1.5rem                   # 위아래 여백 조금
+      view: card
+
+
   - block: collection
     content:
       title: All Publications
