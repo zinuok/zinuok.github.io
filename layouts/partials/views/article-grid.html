@@ -12,8 +12,10 @@
 
 {{ else }}
 
-<div class="w-full">
-  <div class="w-full max-w-6xl mx-auto px-4
+{{/* 부모 컨테이너가 아무리 좁아도, 여기서 한 번 화면 전체로 튀어나오기 */}}
+<div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
+
+  <div class="mx-auto max-w-6xl px-4
               grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
               gap-8 my-10">
 
