@@ -22,7 +22,7 @@ url_code: "https://github.com/mickeykang16/Ev3DOD"
 summary: "Event-based 3D object detection leveraging asynchronous event cameras to overcome blind times in autonomous driving."
 
 tags: ["Event Camera", "3D Object Detection", "Autonomous Driving"]
-featured: true  # 메인에 강조
+featured: false  # 메인에 강조
 
 # 페이지 기능들
 reading_time: false

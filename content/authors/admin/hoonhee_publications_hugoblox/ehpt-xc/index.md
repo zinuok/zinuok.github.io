@@ -17,7 +17,7 @@ url_pdf: "https://openreview.net/pdf?id=ZQy6dGlBay"
 url_code: "https://github.com/Chohoonhee/EHPT-XC"
 summary: "A large-scale benchmark dataset for event-guided human pose estimation and tracking under extreme conditions."
 tags: ["Event Camera", "Pose Estimation", "Dataset"]
-featured: true
+featured: false
 reading_time: false
 profile: false
 show_date: false

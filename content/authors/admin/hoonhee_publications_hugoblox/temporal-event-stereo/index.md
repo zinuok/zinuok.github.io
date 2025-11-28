@@ -15,7 +15,7 @@ url_pdf: "https://arxiv.org/abs/2407.10831"
 url_code: "https://github.com/mickeykang16/TemporalEventStereo"
 summary: "Event-based stereo matching method that jointly learns temporal and stereoscopic flow."
 tags: ["Event Camera", "Stereo", "Depth Estimation"]
-featured: true
+featured: false
 reading_time: false
 profile: false
 show_date: false

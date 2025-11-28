@@ -14,7 +14,7 @@ url_pdf: ""
 url_code: ""
 summary: "Event-guided low-light video enhancement and deblurring method targeting real-world conditions."
 tags: ["Event Camera", "Low-light", "Video Deblurring"]
-featured: true
+featured: false
 reading_time: false
 profile: false
 show_date: false

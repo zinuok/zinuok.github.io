@@ -15,7 +15,7 @@ url_pdf: "https://openaccess.thecvf.com/content/CVPR2024/papers/Kim_Frequency-aw
 url_code: "https://sites.google.com/view/fevd-cvpr2024"
 summary: "Frequency-aware event-based video deblurring approach designed for real-world motion blur."
 tags: ["Event Camera", "Video Deblurring", "Frequency Domain"]
-featured: true
+featured: false
 reading_time: false
 profile: false
 show_date: false

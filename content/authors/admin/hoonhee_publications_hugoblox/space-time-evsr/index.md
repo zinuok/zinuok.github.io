@@ -14,7 +14,7 @@ url_pdf: "https://openaccess.thecvf.com/content/WACV2025/papers/Cho_Unifying_Low
 url_code: "https://github.com/Chohoonhee/ESTNet"
 summary: "Space-time video super-resolution using event cameras to jointly align low- and high-resolution information."
 tags: ["Event Camera", "Video Super-Resolution"]
-featured: true
+featured: false
 reading_time: false
 profile: false
 show_date: false

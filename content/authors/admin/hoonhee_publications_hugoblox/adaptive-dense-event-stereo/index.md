@@ -12,7 +12,7 @@ url_pdf: "https://openaccess.thecvf.com/content/CVPR2023/papers/Cho_Learning_Ada
 url_code: ""
 summary: "Adaptive dense event stereo method that learns from the image domain."
 tags: ["Event Camera", "Stereo", "Depth Estimation"]
-featured: true
+featured: false
 reading_time: false
 profile: false
 show_date: false

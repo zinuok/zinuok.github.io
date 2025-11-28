@@ -11,7 +11,7 @@ url_pdf: "https://ojs.aaai.org/index.php/AAAI/article/view/19923/19682"
 url_code: "https://github.com/Chohoonhee/event-image-stereo-dataset"
 summary: "Event-image fusion stereo framework with cross-modality feature propagation."
 tags: ["Event Camera", "Stereo", "Cross-modality"]
-featured: true
+featured: false
 reading_time: false
 profile: false
 show_date: false

@@ -12,7 +12,7 @@ url_pdf: "https://ieeexplore.ieee.org/document/9444782"
 url_code: ""
 summary: "Event-based omnidirectional multi-view stereo method for wide field-of-view 3D reconstruction."
 tags: ["Event Camera", "Multi-View Stereo", "3D Reconstruction"]
-featured: true
+featured: false
 reading_time: false
 profile: false
 show_date: false

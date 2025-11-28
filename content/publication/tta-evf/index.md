@@ -13,7 +13,7 @@ url_pdf: "https://openaccess.thecvf.com/content/CVPR2024/papers/Cho_TTA-EVF_Test
 url_code: "https://github.com/Chohoonhee/TTA-EVF"
 summary: "Test-time adaptation framework for event-based video frame interpolation using reliable pixel and sample estimation."
 tags: ["Event Camera", "Video Interpolation", "Domain Adaptation"]
-featured: true
+featured: false
 reading_time: false
 profile: false
 show_date: false

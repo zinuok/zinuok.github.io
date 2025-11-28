@@ -17,7 +17,7 @@ url_pdf: "https://openaccess.thecvf.com/content/ICCV2023/papers/Cho_Label-Free_E
 url_code: "https://github.com/Chohoonhee/Ev-LaFOR"
 summary: "Label-free event-based object recognition with joint learning of event-to-image reconstruction."
 tags: ["Event Camera", "Object Recognition", "Self-supervised"]
-featured: true
+featured: false
 reading_time: false
 profile: false
 show_date: false

@@ -15,7 +15,7 @@ url_pdf: ""
 url_code: "https://github.com/Chohoonhee/EHPT-XC"  # placeholder, update to CMTA repo if available
 summary: "Event-guided video deblurring framework using cross-modal temporal alignment."
 tags: ["Event Camera", "Video Deblurring"]
-featured: true
+featured: false
 reading_time: false
 profile: false
 show_date: false

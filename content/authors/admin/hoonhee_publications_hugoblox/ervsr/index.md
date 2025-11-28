@@ -23,7 +23,7 @@ url_pdf: "https://openaccess.thecvf.com/content/WACV2023/papers/Kim_Efficient_Re
 url_code: "https://github.com/haewonc/ERVSR"
 summary: "Efficient reference-based video super-resolution using a single high-resolution reference image."
 tags: ["Video Super-Resolution", "Reference-based SR"]
-featured: true
+featured: false
 reading_time: false
 profile: false
 show_date: false

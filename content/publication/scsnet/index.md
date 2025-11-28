@@ -11,7 +11,7 @@ url_pdf: "https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136920467.pdf
 url_code: "https://github.com/Chohoonhee/SCSNet"
 summary: "Event-image deep stereo method using selection and cross-similarity mechanisms."
 tags: ["Event Camera", "Stereo"]
-featured: true
+featured: false
 reading_time: false
 profile: false
 show_date: false

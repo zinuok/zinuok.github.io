@@ -17,7 +17,7 @@ url_pdf: "https://arxiv.org/abs/2407.11216"
 url_code: "https://github.com/Chohoonhee/EV-WSSS"
 summary: "Weakly-supervised semantic segmentation method tailored for event camera data."
 tags: ["Event Camera", "Semantic Segmentation", "Weak Supervision"]
-featured: true
+featured: false
 reading_time: false
 profile: false
 show_date: false

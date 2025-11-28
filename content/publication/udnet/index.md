@@ -15,7 +15,7 @@ url_pdf: "https://arxiv.org/abs/2407.10703"
 url_code: "https://github.com/jeongyh98/UDNET"
 summary: "Unpaired day-to-night event translation for robust nighttime event-based perception."
 tags: ["Event Camera", "Domain Adaptation", "Nighttime"]
-featured: true
+featured: false
 reading_time: false
 profile: false
 show_date: false

@@ -13,7 +13,7 @@ url_pdf: "https://openaccess.thecvf.com/content/ICCV2023/papers/Cho_Non-Coaxial_
 url_code: "https://pure.kaist.ac.kr/en/publications/non-coaxial-event-guided-motion-deblurring-with-spatial-alignment"
 summary: "Event-guided motion deblurring framework that handles non-coaxial sensor configurations via spatial alignment."
 tags: ["Event Camera", "Motion Deblurring"]
-featured: true
+featured: false
 reading_time: false
 profile: false
 show_date: false
