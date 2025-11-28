@@ -5,19 +5,22 @@
 {{ $pages = where $pages "Params.featured" true }}
 
 {{ if not (gt (len $pages) 0) }}
+
   <p class="text-sm text-gray-500 dark:text-gray-400">
     No publications found.
   </p>
+
 {{ else }}
 
-<div class="not-prose w-full">
-  <div class="mx-auto max-w-6xl px-4
+<div class="w-full">
+  <div class="w-full max-w-none mx-auto px-4
               grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
               gap-8 my-10">
 
     {{ range $pages }}
     <a href="{{ .RelPermalink }}" 
-       class="block group bg-white dark:bg-gray-900 p-6 rounded-xl
+       class="block w-full max-w-none
+              group bg-white dark:bg-gray-900 p-6 rounded-xl
               shadow-md hover:shadow-xl transition-all duration-200">
 
       {{ with .Params.featured_image }}
@@ -46,7 +49,9 @@
       {{ with .Params.tags }}
       <div class="flex flex-wrap gap-2 mt-3">
         {{ range . }}
-        <span class="px-2 py-1 text-xs rounded bg-blue-100 text-blue-700 dark:bg-blue-800 dark:text-blue-100">
+        <span class="px-2 py-1 text-xs rounded
+                     bg-blue-100 text-blue-700
+                     dark:bg-blue-800 dark:text-blue-100">
           {{ . }}
         </span>
         {{ end }}
