@@ -6,7 +6,7 @@ type: landing
 sections:
   - block: collection
     content:
-      title: "All Publications"
+      title: "Publications"
       text: ""
       # 0 = 모든 publication 다 보여주기
       count: 0
