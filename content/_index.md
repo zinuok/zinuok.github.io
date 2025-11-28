@@ -68,6 +68,7 @@ sections:
 
 
   - block: collection
+    id: publications        # ⬅ 이 줄 추가
     content:
       title: All Publications
       text: ''
@@ -82,6 +83,11 @@ sections:
         exclude_featured: false
     design:
       view: citation
+
+
+
+
+      
   - block: markdown
     content:
       title: '📚 Academic Service'

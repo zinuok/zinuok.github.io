@@ -3,8 +3,9 @@ main:
     url: "/"
     weight: 10
 
-  - name: "Publications"
-    url: "/publication/"
+  - name: Publications
+    url: '#publications'  # ⬅ 섹션 id 로 변경
+    page_ref: '/'         # 홈 페이지 기준에서 이 앵커로 이동
     weight: 20
 
   - name: "CV"
