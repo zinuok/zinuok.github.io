@@ -13,25 +13,27 @@
 {{ else }}
 
 <div class="w-full">
-  <div class="w-full max-w-none mx-auto px-4
+  <div class="w-full max-w-6xl mx-auto px-4
               grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
               gap-8 my-10">
 
     {{ range $pages }}
-    <a href="{{ .RelPermalink }}" 
-       class="block w-full max-w-none
-              group bg-white dark:bg-gray-900 p-6 rounded-xl
-              shadow-md hover:shadow-xl transition-all duration-200">
+    <div class="w-full h-full
+                bg-white dark:bg-gray-900 p-6 rounded-xl
+                shadow-md hover:shadow-xl
+                transition-all duration-200">
 
       {{ with .Params.featured_image }}
       <img src="{{ . }}"
            class="w-full h-48 object-cover rounded-md mb-4
-                  group-hover:opacity-90 transition"
+                  hover:opacity-90 transition"
            loading="lazy">
       {{ end }}
 
-      <h3 class="text-xl font-semibold leading-tight group-hover:text-blue-600">
-        {{ .Title }}
+      <h3 class="text-xl font-semibold leading-tight">
+        <a href="{{ .RelPermalink }}" class="hover:text-blue-600">
+          {{ .Title }}
+        </a>
       </h3>
 
       {{ with .Params.publication }}
@@ -58,7 +60,7 @@
       </div>
       {{ end }}
 
-    </a>
+    </div>
     {{ end }}
 
   </div>
