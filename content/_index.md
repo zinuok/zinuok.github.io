@@ -60,7 +60,7 @@ sections:
       filters:
         folders:
           - publication
-        featured_only: true
+        # featured_only: true
     design:
       view: article-grid
       # columns: 4   # 이런 거 있었으면 전부 지워버리자 (우리가 직접 그리드 만듦)
