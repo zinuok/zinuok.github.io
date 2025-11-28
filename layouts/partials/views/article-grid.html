@@ -1,17 +1,18 @@
-{{/* Custom 3-column grid for collection view `article-grid` */}}
+{{/* Custom 3-column grid for publications, independent of .Items/.Pages */}}
 
-{{/* 안전하게 Items 또는 Pages 중 있는 쪽을 사용 */}}
-{{ $items := .Items }}
-{{ if not $items }}
-  {{ $items = .Pages }}
-{{ end }}
+{{/* 1. 사이트 전체에서 publication 섹션 페이지 모으기 */}}
+{{ $pages := where site.RegularPages "Section" "publication" }}
 
-{{ if not $items }}
-  <p class="text-sm text-gray-500 dark:text-gray-400">No items found.</p>
+{{/* 2. 필요하면 featured=true만 남기고 싶으면 이 줄 주석 해제
+{{ $pages = where $pages "Params.featured" true }}
+*/}}
+
+{{ if not (gt (len $pages) 0) }}
+  <p class="text-sm text-gray-500 dark:text-gray-400">No publications found.</p>
 {{ else }}
 
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-6">
-  {{ range $items }}
+  {{ range $pages }}
   <a href="{{ .RelPermalink }}" class="block group bg-white dark:bg-gray-900 p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-200">
 
     {{ with .Params.featured_image }}
