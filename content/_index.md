@@ -68,20 +68,20 @@ sections:
 
 
   - block: collection
-    id: publications          # ⬅ 이 id가 나중에 #publications 앵커가 됩니다
     content:
-      title: "All Publications"
-      text: ""
-      count: 0                # 0 = 모든 publication 다 보여주기
+      title: All Publications
+      text: ''
+      # 0 = 모든 publication 다 보여주기
+      count: 0
+      # "See all publications" 버튼 끄기
       archive:
-        enable: false         # "See all publications" 버튼 제거
+        enable: false
       filters:
         folders:
-          - publication       # content/publication 아래 글들 전부
+          - publication
         exclude_featured: false
     design:
-      view: card              # 카드 그리드 뷰
-      columns: "3"            # 3열 그리드
+      view: citation
 
 
 
