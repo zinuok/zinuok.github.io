@@ -71,6 +71,11 @@ sections:
     content:
       title: All Publications
       text: ''
+      # 0 = 모든 publication 다 보여주기
+      count: 0
+      # "See all publications" 버튼 끄기
+      archive:
+        enable: false
       filters:
         folders:
           - publication
