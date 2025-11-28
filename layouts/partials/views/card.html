@@ -1,4 +1,4 @@
-{{/* Custom 3-column card grid for publications */}}
+<!-- {{/* Custom 3-column card grid for publications */}}
 
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-6">
 
@@ -32,4 +32,10 @@
   </a>
   {{ end }}
 
+</div> -->
+
+{{ range .Pages }}
+<div style="border:1px solid red;padding:10px;margin:10px;">
+  <h3>{{ .Title }}</h3>
 </div>
+{{ end }}
