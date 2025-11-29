@@ -7,6 +7,6 @@ main:
     pageRef: publications
     weight: 20
 
-  - name: CV
-    url: '/cv/'
-    weight: 30
+  # - name: CV
+  #   url: '/cv/'
+  #   weight: 30
