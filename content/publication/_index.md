@@ -1,21 +1,19 @@
 ---
 title: "Publications"
-type: landing   # 블록(섹션)들을 쓸 수 있는 페이지 타입
+type: landing   # 섹션/블록을 쓸 수 있는 랜딩 페이지
 
 sections:
   - block: collection
-    id: all-publications
+    id: publications
     content:
       title: "All Publications"
       subtitle: ""
       text: ""
-      # 0 = 모든 페이지 다 보여주기
-      count: 0
+      count: 0              # 0 = 모든 논문 다 보여주기
 
       filters:
-        # 각 논문이 들어있는 폴더
         folders:
-          - publication
+          - publication     # content/publication/ 아래 폴더들
         author: ""
         category: ""
         tag: ""
@@ -30,7 +28,6 @@ sections:
       sort_ascending: false
 
     design:
-      # 여기서 카드 레이아웃 선택
-      view: card      # card, compact, article-grid 등 가능
-      columns: "3"    # 한 줄에 카드 3개
+      view: card            # 카드 뷰
+      columns: "3"          # 한 줄에 3개
 ---
