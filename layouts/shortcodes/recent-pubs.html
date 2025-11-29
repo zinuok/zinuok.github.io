@@ -1,46 +1,67 @@
-{{/* ...위쪽 로직은 그대로 두고, 출력 부분만 수정 */}}
+{{/* layouts/shortcodes/recent-pubs.html
+    홈에서 featured publication 최대 6개를 카드 형태로 보여주는 쇼트코드 */}}
+
+{{ $pages := where site.RegularPages "Section" "publication" }}
+{{ $pages = where $pages "Params.featured" true }}
+{{ $pages = sort $pages "Date" "desc" }}
+{{ $pages = first 6 $pages }}
+
+{{ if not (gt (len $pages) 0) }}
+
+ <p class="text-sm text-gray-500 dark:text-gray-400">
+   No recent publications found.
+ </p>
+
+{{ else }}
 
 <div class="mx-auto max-w-5xl px-4 lg:px-8">
 
-  <div class="grid grid-cols-1 md:grid-cols-2
-              gap-8 my-10">
+ <div class="grid grid-cols-1 md:grid-cols-2
+             gap-8 my-10">
 
-    {{ range $pages }}
-    <div class="w-full h-full
-                bg-white dark:bg-gray-900 p-5 rounded-xl
-                shadow-md hover:shadow-xl
-                transition-all duration-200">
+   {{ range $pages }}
 
-      {{ with .Params.featured_image }}
-        <img src="{{ . }}"
-             class="w-full h-40 object-cover rounded-md mb-3
-                    hover:opacity-90 transition"
-             loading="lazy">
-      {{ end }}
+   <div class="w-full h-full
+               bg-white dark:bg-gray-900 p-5 rounded-xl
+               shadow-md hover:shadow-xl
+               transition-all duration-200">
 
-      {{/* 제목: 더 작게 + 밑줄은 hover 때만 */}}
-      <p class="text-sm md:text-base font-semibold leading-snug">
-        <a href="{{ .RelPermalink }}"
-           class="no-underline hover:underline hover:text-blue-600">
-          {{ .Title }}
-        </a>
-      </p>
+     {{ with .Params.featured_image }}
+       <img src="{{ . }}"
+            class="w-full h-40 object-cover rounded-md mb-3
+                   hover:opacity-90 transition"
+            loading="lazy">
+     {{ end }}
 
-      {{ $authors := .Params.authors }}
-      {{ if $authors }}
-        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
-          {{ delimit $authors ", " }}
-        </p>
-      {{ end }}
+     {{/* 제목: 작게 + hover 때만 밑줄 */}}
+     <p class="text-sm md:text-base font-semibold leading-snug">
+       <a href="{{ .RelPermalink }}"
+          class="no-underline hover:underline hover:text-blue-600">
+         {{ .Title }}
+       </a>
+     </p>
 
-      {{ with .Params.publication }}
-        <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">
-          {{ . }}
-        </p>
-      {{ end }}
+     {{/* 저자들 */}}
+     {{ $authors := .Params.authors }}
+     {{ if $authors }}
+       <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+         {{ delimit $authors ", " }}
+       </p>
+     {{ end }}
 
-    </div>
-    {{ end }}
+     {{/* 학회/저널 이름 */}}
+     {{ with .Params.publication }}
+       <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">
+         {{ . }}
+       </p>
+     {{ end }}
 
-  </div>
+   </div>
+
+   {{ end }}
+
+ </div>
+
 </div>
+
+{{ end }}
