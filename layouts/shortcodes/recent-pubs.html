@@ -1,60 +1,46 @@
-{{/* layouts/shortcodes/recent-pubs.html */}}
+{{/* ...위쪽 로직은 그대로 두고, 출력 부분만 수정 */}}
 
-{{ $pages := where site.RegularPages "Section" "publication" }}
-{{ $pages = where $pages "Params.featured" true }}
-{{ $pages = sort $pages "Date" "desc" }}
-{{ $pages = first 6 $pages }}
+<div class="mx-auto max-w-5xl px-4 lg:px-8">
 
-{{ if not (gt (len $pages) 0) }}
-  <p class="text-sm text-gray-500 dark:text-gray-400">
-    No recent publications found.
-  </p>
-{{ else }}
+  <div class="grid grid-cols-1 md:grid-cols-2
+              gap-8 my-10">
 
-<div class="w-full px-4
-            grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
-            gap-8 my-10">
+    {{ range $pages }}
+    <div class="w-full h-full
+                bg-white dark:bg-gray-900 p-5 rounded-xl
+                shadow-md hover:shadow-xl
+                transition-all duration-200">
 
-  {{ range $pages }}
-  <div class="w-full h-full
-              bg-white dark:bg-gray-900 p-5 rounded-xl
-              shadow-md hover:shadow-xl
-              transition-all duration-200">
+      {{ with .Params.featured_image }}
+        <img src="{{ . }}"
+             class="w-full h-40 object-cover rounded-md mb-3
+                    hover:opacity-90 transition"
+             loading="lazy">
+      {{ end }}
 
-    {{ with .Params.featured_image }}
-      <img src="{{ . }}"
-           class="w-full h-40 object-cover rounded-md mb-3
-                  hover:opacity-90 transition"
-           loading="lazy">
-    {{ end }}
-
-    {{/* 제목: 더 작고, h 태그 안 쓰고 p로 */}}
-    <p class="text-sm md:text-base font-semibold leading-snug">
-      <a href="{{ .RelPermalink }}" class="hover:text-blue-600">
-        {{ .Title }}
-      </a>
-    </p>
-
-    {{/* 저자들: authors 배열을 ", "로 join해서 한 줄로 */}}
-    {{ $authors := .Params.authors }}
-    {{ if $authors }}
-      <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
-        {{ delimit $authors ", " }}
+      {{/* 제목: 더 작게 + 밑줄은 hover 때만 */}}
+      <p class="text-sm md:text-base font-semibold leading-snug">
+        <a href="{{ .RelPermalink }}"
+           class="no-underline hover:underline hover:text-blue-600">
+          {{ .Title }}
+        </a>
       </p>
-    {{ end }}
 
-    {{/* 학회/저널 이름 */}}
-    {{ with .Params.publication }}
-      <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">
-        {{ . }}
-      </p>
-    {{ end }}
+      {{ $authors := .Params.authors }}
+      {{ if $authors }}
+        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+          {{ delimit $authors ", " }}
+        </p>
+      {{ end }}
 
-    {{/* summary, tags(주제 칩) 전부 제거 */}}
+      {{ with .Params.publication }}
+        <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">
+          {{ . }}
+        </p>
+      {{ end }}
+
+    </div>
+    {{ end }}
 
   </div>
-  {{ end }}
-
 </div>
-
-{{ end }}
