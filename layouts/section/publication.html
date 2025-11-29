@@ -64,13 +64,30 @@
             </p>
           {{ end }}
 
-          {{/* summary 있으면 한 줄 정도 보여주고 싶으면 여기 추가 가능
-          {{ with $page.Params.summary }}
-            <p class="text-xs text-gray-500 dark:text-gray-400 mt-2 line-clamp-3">
-              {{ . }}
-            </p>
-          {{ end }}
-          */}}
+          {{/* 🔥 여기가 새로 추가된 “카테고리/아이템” 영역 🔥 */}}
+          <div class="mt-3 space-y-2">
+
+            {{/* 1) 태그(카테고리 느낌) 칩으로 보여주기 */}}
+            {{ with $page.Params.tags }}
+              <div class="flex flex-wrap gap-1">
+                {{ range . }}
+                  <span class="text-[11px] px-2 py-0.5 rounded-full
+                               bg-gray-100 dark:bg-gray-800
+                               text-gray-600 dark:text-gray-300">
+                    {{ . }}
+                  </span>
+                {{ end }}
+              </div>
+            {{ end }}
+
+            {{/* 2) PDF / Project / Code / Dataset 같은 링크 버튼들 */}}
+            <div class="text-xs">
+              {{/* Hugo Blox 기본 버튼 스타일 재사용 */}}
+              {{ partial "page_links" (dict "content" $page "is_list" 1) }}
+            </div>
+
+          </div>
+          {{/* 🔥 추가 영역 끝 🔥 */}}
 
         </div>
 
