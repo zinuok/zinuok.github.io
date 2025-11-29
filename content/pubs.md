@@ -1,11 +1,10 @@
 ---
 title: "Publications"
-slug: "pubs"        # 이 페이지의 URL = /pubs/
-type: landing       # 블록(섹션)을 쓰는 랜딩 페이지 타입
+type: landing
 
 sections:
   - block: collection
-    id: all-publications
+    id: pubs
     content:
       title: "All Publications"
       subtitle: ""

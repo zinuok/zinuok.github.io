@@ -4,5 +4,5 @@ main:
     weight: 10
 
   - name: Publications
-    url: '/pubs/'      # 또는 pageRef: pubs 도 가능
+    pageRef: pubs     # pubs.md 파일 이름과 동일하게
     weight: 20
