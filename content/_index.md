@@ -53,6 +53,17 @@ sections:
   #     columns: 3                          # 데스크탑에서 3개 카드씩
   #     spacing:
   #       padding: 1.5rem                   # 위아래 여백 조금
+  # - block: collection
+  #   id: papers
+  #   content:
+  #     title: Recent Publications
+  #     filters:
+  #       folders:
+  #         - publication
+  #       featured_only: true
+  #   design:
+  #     view: article-grid   # 우리가 방금 고친 view
+  #     columns: "3"
   - block: collection
     id: papers
     content:
@@ -61,9 +72,13 @@ sections:
         folders:
           - publication
         featured_only: true
+      count: 4       # 최근 것 4개만 보여주고 싶으면 (원하면 숫자 조절)
+      offset: 0
+      sort_by: "Date"
+      sort_ascending: false
     design:
-      view: article-grid   # 우리가 방금 고친 view
-      columns: "3"
+      view: card     # ✅ 기본 card 뷰 사용
+      columns: "3"   # 한 줄에 3개 카드
 
 
 
