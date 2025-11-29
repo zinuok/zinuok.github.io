@@ -99,21 +99,25 @@ sections:
       title: '📚 Academic Service'
       subtitle: ''
       text: |-
-        I have been serving the research community as a reviewer for:
+        <div class="text-sm leading-relaxed">
+          I have been serving the research community as a reviewer for:
 
-        - 2021 · IEEE Transactions on Instrumentation & Measurement  
-        - 2023 · AAAI Conference on Artificial Intelligence (AAAI)  
-        - 2023 · International Conference on Computer Vision (ICCV)  
-        - 2024 · AAAI Conference on Artificial Intelligence (AAAI)  
-        - 2024 · IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)  
-        - 2024 · IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)  
-        - 2024 · European Conference on Computer Vision (ECCV)  
-        - 2025 · AAAI Conference on Artificial Intelligence (AAAI)  
-        - 2025 · IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)  
-        - 2025 · IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)  
-        - 2025 · International Conference on Computer Vision (ICCV) (Outstanding Reviewers)  
-        - 2025 · Conference on Neural Information Processing Systems (NeurIPS) (Top Reviewers)  
-        - 2026 · AAAI Conference on Artificial Intelligence (AAAI)
+          <ul class="list-disc ml-6">
+            <li>2021 · IEEE Transactions on Instrumentation & Measurement</li>
+            <li>2023 · AAAI Conference on Artificial Intelligence (AAAI)</li>
+            <li>2023 · International Conference on Computer Vision (ICCV)</li>
+            <li>2024 · AAAI Conference on Artificial Intelligence (AAAI)</li>
+            <li>2024 · IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</li>
+            <li>2024 · IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</li>
+            <li>2024 · European Conference on Computer Vision (ECCV)</li>
+            <li>2025 · AAAI Conference on Artificial Intelligence (AAAI)</li>
+            <li>2025 · IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</li>
+            <li>2025 · IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</li>
+            <li>2025 · International Conference on Computer Vision (ICCV) (Outstanding Reviewers)</li>
+            <li>2025 · Conference on Neural Information Processing Systems (NeurIPS) (Top Reviewers)</li>
+            <li>2026 · AAAI Conference on Artificial Intelligence (AAAI)</li>
+          </ul>
+        </div>
 
   #     text: |-
   #       <div style="font-size:1.0rem;">
