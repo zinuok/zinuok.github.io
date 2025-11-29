@@ -67,18 +67,18 @@ sections:
   - block: collection
     id: papers
     content:
-      title: Recent Publications
+      title: "Recent Publications"
       filters:
         folders:
           - publication
         featured_only: true
-      count: 4       # 최근 것 4개만 보여주고 싶으면 (원하면 숫자 조절)
+      count: 6          # 최근 4개만 (원하면 숫자 조절)
       offset: 0
       sort_by: "Date"
       sort_ascending: false
     design:
-      view: card     # ✅ 기본 card 뷰 사용
-      columns: "3"   # 한 줄에 3개 카드
+      view: "citation"  # 또는 "card" (기본 카드 뷰)
+      columns: "3"
 
 
 
