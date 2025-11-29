@@ -21,6 +21,11 @@ publication_types: ["1"]
 date: 2025-10-27
 url_pdf: "https://arxiv.org/abs/2510.23205"
 url_project: "https://vrdriveneurips.github.io/"
+image:
+  placement: 3
+  filename: "vr-feature.png"
+  caption: ""
+  focal_point: "Center"
 summary: "An end-to-end autonomous driving framework that achieves viewpoint robustness by jointly learning feed-forward 3D Gaussian splatting for planning-aware view synthesis."
 tags: ["End-to-End Driving", "3D Gaussian Splatting", "Autonomous Driving"]
 featured: true
