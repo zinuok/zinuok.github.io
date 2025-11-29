@@ -64,21 +64,13 @@ sections:
   #   design:
   #     view: article-grid   # 우리가 방금 고친 view
   #     columns: "3"
-  - block: collection
-    id: papers
+  - block: markdown
+    id: recent-pubs
     content:
       title: "Recent Publications"
-      filters:
-        folders:
-          - publication
-        featured_only: true
-      count: 6          # 최근 4개만 (원하면 숫자 조절)
-      offset: 0
-      sort_by: "Date"
-      sort_ascending: false
-    design:
-      view: "card"  # 또는 "card" (기본 카드 뷰)
-      columns: "3"
+      subtitle: ""
+      text: '{{< recent-pubs >}}'
+
 
 
 
