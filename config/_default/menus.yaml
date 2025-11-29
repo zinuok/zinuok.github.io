@@ -7,6 +7,6 @@ main:
     pageRef: publications   # 파일 이름(publications.md)과 맞추기
     weight: 20
 
-  # - name: CV
-  #   url: '/cv/'
-  #   weight: 30
+  - name: CV
+    url: '/cv/'
+    weight: 30
