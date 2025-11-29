@@ -1,5 +1,6 @@
 {{/* layouts/shortcodes/recent-pubs.html
-    홈에서 featured publication 최대 6개를 카드로 보여주는 쇼트코드 */}}
+    홈에서 featured publication 최대 6개를
+    화면 전체 폭을 쓰는 3열 카드 그리드로 보여주는 쇼트코드 */}}
 
 {{ $pages := where site.RegularPages "Section" "publication" }}
 {{ $pages = where $pages "Params.featured" true }}
@@ -14,9 +15,11 @@
 
 {{ else }}
 
-<div class="mx-auto max-w-none px-4 lg:px-10">
+{{/* 부모의 max-width를 뚫고 화면 전체 폭 사용 */}}
+<div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
 
- <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
+ <div class="mx-auto max-w-7xl px-6 lg:px-12
+             grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
              gap-8 my-10">
 
    {{ range $pages }}
@@ -33,7 +36,7 @@
             loading="lazy">
      {{ end }}
 
-     {{/* 제목: 작은 편, hover 때만 밑줄 */}}
+     {{/* 제목: 작게, hover 때만 밑줄 */}}
      <p class="text-sm md:text-base font-semibold leading-snug">
        <a href="{{ .RelPermalink }}"
           class="no-underline hover:underline hover:text-blue-600">
@@ -41,7 +44,7 @@
        </a>
      </p>
 
-     {{/* 저자들 */}}
+     {{/* 저자들 한 줄 */}}
      {{ $authors := .Params.authors }}
      {{ if $authors }}
        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
