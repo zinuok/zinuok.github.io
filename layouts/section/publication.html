@@ -1,0 +1,85 @@
+{{ define "main" }}
+
+<section class="container py-8 mx-auto">
+  <h1 class="text-3xl font-bold mb-6">Publications</h1>
+
+  {{/* 이 섹션 안의 publication 페이지들 최신순으로 정렬 */}}
+  {{ $pages := .RegularPages }}
+  {{ $pages = sort $pages "Date" "desc" }}
+
+  {{ if not (gt (len $pages) 0) }}
+
+    <p class="text-sm text-gray-500 dark:text-gray-400">
+      No publications found.
+    </p>
+
+  {{ else }}
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {{ range $pages }}
+
+        {{ $page := . }}
+
+        <div class="w-full h-full
+                    bg-white dark:bg-gray-900 p-5 rounded-xl
+                    shadow-md hover:shadow-xl
+                    transition-all duration-200">
+
+          {{/* 페이지 번들 리소스에서 이미지 선택 로직 */}}
+          {{ $images := $page.Resources.ByType "image" }}
+          {{ $img := $images.GetMatch "*feature*" }}
+          {{ if and (not $img) (gt (len $images) 0) }}
+            {{ $img = index $images 0 }}
+          {{ end }}
+
+          {{ with $img }}
+            <img src="{{ .RelPermalink }}"
+                 class="w-full h-40 object-cover rounded-md mb-3
+                        hover:opacity-90 transition"
+                 loading="lazy"
+                 alt="{{ $page.Title }}">
+          {{ end }}
+
+          {{/* 제목 */}}
+          <p class="text-sm md:text-base font-semibold leading-snug">
+            <a href="{{ $page.RelPermalink }}"
+               class="no-underline hover:underline hover:text-blue-600">
+              {{ $page.Title }}
+            </a>
+          </p>
+
+          {{/* 저자 */}}
+          {{ $authors := $page.Params.authors }}
+          {{ if $authors }}
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+              {{ delimit $authors ", " }}
+            </p>
+          {{ end }}
+
+          {{/* 학회 / 저널 이름 */}}
+          {{ with $page.Params.publication }}
+            <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">
+              {{ . }}
+            </p>
+          {{ end }}
+
+          {{/* summary 있으면 한 줄 정도 보여주고 싶으면 여기 추가 가능
+          {{ with $page.Params.summary }}
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-2 line-clamp-3">
+              {{ . }}
+            </p>
+          {{ end }}
+          */}}
+
+        </div>
+
+      {{ end }}
+
+    </div>
+
+  {{ end }}
+
+</section>
+
+{{ end }}
