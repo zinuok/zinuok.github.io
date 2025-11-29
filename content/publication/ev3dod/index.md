@@ -15,6 +15,11 @@ publication_types: ["1"]
 date: 2025-06-01
 url_pdf: "https://arxiv.org/abs/2502.19630"
 url_code: "https://github.com/mickeykang16/Ev3DOD"
+image:
+  placement: 3
+  filename: "feature.png"
+  caption: ""
+  focal_point: "Center"  
 summary: "Event-based 3D object detection leveraging asynchronous event cameras to overcome blind times in autonomous driving."
 tags: ["Event Camera", "3D Object Detection", "Autonomous Driving"]
 featured: true

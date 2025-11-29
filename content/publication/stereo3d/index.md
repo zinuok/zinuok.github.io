@@ -13,6 +13,13 @@ publication_types: ["1"]
 date: 2025-10-01
 url_pdf: "https://arxiv.org/abs/2508.02288"
 url_code: "https://github.com/mickeykang16/Ev-Stereo3D"
+
+image:
+  placement: 3
+  filename: "feature.png"
+  caption: ""
+  focal_point: "Center"  
+
 summary: "A continuous-time 3D object detection framework that relies solely on stereo event cameras, exploiting their high temporal resolution with dual filters and object-centric regression."
 tags: ["Event Camera", "Stereo", "3D Object Detection", "Continuous-Time"]
 featured: true
