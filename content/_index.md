@@ -62,9 +62,8 @@ sections:
           - publication
         featured_only: true
     design:
-      view: card
+      view: article-grid   # 우리가 방금 고친 view
       columns: "3"
-      # columns: 4   # 이런 거 있었으면 전부 지워버리자 (우리가 직접 그리드 만듦)
 
 
 

@@ -1,0 +1,48 @@
+{{/* layouts/partials/views/article-grid.html */}}
+
+{{/* 이 partial은 "단일 논문 페이지(. = 하나의 publication)"에 대한 카드만 렌더링한다. */}}
+{{ $page := . }}
+
+<div class="w-full h-full
+            bg-white dark:bg-gray-900 p-6 rounded-xl
+            shadow-md hover:shadow-xl
+            transition-all duration-200">
+
+  {{ with $page.Params.featured_image }}
+    <img src="{{ . }}"
+         class="w-full h-48 object-cover rounded-md mb-4
+                hover:opacity-90 transition"
+         loading="lazy">
+  {{ end }}
+
+  <h3 class="text-xl font-semibold leading-tight">
+    <a href="{{ $page.RelPermalink }}" class="hover:text-blue-600">
+      {{ $page.Title }}
+    </a>
+  </h3>
+
+  {{ with $page.Params.publication }}
+    <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+      {{ . }}
+    </p>
+  {{ end }}
+
+  {{ with $page.Params.summary }}
+    <p class="text-sm mt-3 opacity-90">
+      {{ . }}
+    </p>
+  {{ end }}
+
+  {{ with $page.Params.tags }}
+    <div class="flex flex-wrap gap-2 mt-3">
+      {{ range . }}
+        <span class="px-2 py-1 text-xs rounded
+                     bg-blue-100 text-blue-700
+                     dark:bg-blue-800 dark:text-blue-100">
+          {{ . }}
+        </span>
+      {{ end }}
+    </div>
+  {{ end }}
+
+</div>
