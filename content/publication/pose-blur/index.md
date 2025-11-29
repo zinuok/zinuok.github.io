@@ -15,7 +15,7 @@ url_pdf: "https://arxiv.org/abs/2507.22438"
 url_code: "https://github.com/kmax2001/EvSharp2Blur"
 summary: "An unsupervised domain adaptation framework for 2D human pose estimation under extreme motion blur, leveraging event cameras and event-based augmentation without target-domain annotations."
 tags: ["Event Camera", "Human Pose Estimation", "Domain Adaptation", "Motion Blur"]
-featured: false
+featured: true
 reading_time: false
 profile: false
 show_date: false
