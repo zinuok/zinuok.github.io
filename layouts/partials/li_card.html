@@ -1,0 +1,100 @@
+{{/* Custom li_card: Publications 등 카드 뷰에서 이미지도 같이 보여주기 */}}
+
+{{ $item := .item }}
+{{ $microdata_type := "CreativeWork" }}
+{{ $show_buttons := false }}
+
+{{/* 컨텐츠 타입에 따라 마이크로데이터 타입/버튼 설정 */}}
+{{ if eq $item.Type "post" }}
+  {{ $microdata_type = "BlogPosting" }}
+{{ else if eq $item.Type "talk" }}
+  {{ $microdata_type = "Event" }}
+  {{ $show_buttons = true }}
+{{ else if eq $item.Type "publication" }}
+  {{ $microdata_type = "ScholarlyArticle" }}
+  {{ $show_buttons = true }}
+{{ end }}
+
+{{/* summary 결정 (원래 템플릿 구조 최대한 유지) */}}
+{{ $summary := "" }}
+{{ if $item.Params.summary }}
+  {{ $summary = $item.Params.summary | markdownify | emojify }}
+{{ else if $item.Params.abstract }}
+  {{ $summary = "" }}
+{{ else if $item.Truncated }}
+  {{ $summary = $item.Summary }}
+{{ else }}
+  {{ $summary = $item.Content }}
+{{ end }}
+
+<div class="card-simple" itemscope itemtype="http://schema.org/{{$microdata_type}}">
+
+  <h3 class="article-title mb-1 mt-3" itemprop="name">
+    <a href="{{ $item.RelPermalink }}" itemprop="url">{{ $item.Title }}</a>
+  </h3>
+
+  {{ if eq $item.Type "talk" }}
+    <div class="article-metadata">
+      {{ if $item.Params.authors }}
+        <div itemprop="author">
+          {{ partial "page_metadata_authors" $item }}
+        </div>
+      {{ end }}
+      <span itemprop="startDate">
+        {{ $date := $item.Params.time_start | default $item.Date }}
+        {{ (time $date).Format $.Site.Params.date_format }}
+        {{ if not $item.Params.all_day }}
+          {{ (time $date).Format ($.Site.Params.time_format | default "3:04 PM") }}
+          {{ with .Params.time_end }}
+          &mdash; {{ (time .).Format ($.Site.Params.time_format | default "3:04 PM") }}
+          {{ end }}
+        {{ end }}
+      </span>
+      {{ with $item.Params.location }}
+      <span class="middot-divider"></span>
+      <span itemprop="location">{{ . }}</span>
+      {{ end }}
+    </div>
+  {{ else }}
+    {{ partial "page_metadata" (dict "content" $item "is_list" 1) }}
+  {{ end }}
+
+  {{/* 🔥 여기부터가 우리가 추가한 이미지 로직 🔥 */}}
+
+  {{/* 이 페이지 번들의 이미지 리소스들 */}}
+  {{ $images := $item.Resources.ByType "image" }}
+
+  {{/* 1순위: 이름에 feature/featured 포함된 이미지 */}}
+  {{ $resource := $images.GetMatch "*feature*" }}
+
+  {{/* 없으면 아무 이미지나 하나라도 사용 */}}
+  {{ if and (not $resource) (gt (len $images) 0) }}
+    {{ $resource = index $images 0 }}
+  {{ end }}
+
+  {{ $anchor := $item.Params.image.focal_point | default "Smart" }}
+
+  {{ with $resource }}
+    {{/* Hugo가 빌드시 webp+해시 붙여도 RelPermalink가 알아서 처리해줌 */}}
+    {{ $image := .Fill (printf "918x517 q90 %s" $anchor) }}
+    <a href="{{ $item.RelPermalink }}">
+      <img src="{{ $image.RelPermalink }}"
+           class="article-banner"
+           itemprop="image"
+           alt="{{ $item.Title }}">
+    </a>
+  {{ end }}
+
+  {{ with $summary }}
+    <div class="article-style" itemprop="articleBody">
+      {{ . }}
+    </div>
+  {{ end }}
+
+  {{ if $show_buttons }}
+    <div class="btn-links">
+      {{ partial "page_links" (dict "content" $item "is_list" 1) }}
+    </div>
+  {{ end }}
+
+</div>
