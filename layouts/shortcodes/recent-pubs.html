@@ -1,70 +1,66 @@
-{{/* layouts/shortcodes/recent-pubs.html
-    홈에서 최근 논문 몇 개를 카드 그리드로 보여주는 커스텀 shortcode */}}
+{{/* layouts/shortcodes/recent-pubs.html */}}
 
-{{/* 1) publication 섹션에서 featured=true 인 페이지만 가져오기 */}}
 {{ $pages := where site.RegularPages "Section" "publication" }}
 {{ $pages = where $pages "Params.featured" true }}
-
-{{/* 2) 날짜 기준 내림차순 정렬 후 상위 6개만 */}}
 {{ $pages = sort $pages "Date" "desc" }}
-{{ $pages = first 3 $pages }}
+{{ $pages = first 6 $pages }}
 
 {{ if not (gt (len $pages) 0) }}
- <p class="text-sm text-gray-500 dark:text-gray-400">
-   No recent publications found.
- </p>
+  <p class="text-sm text-gray-500 dark:text-gray-400">
+    No recent publications found.
+  </p>
 {{ else }}
 
-<div class="mx-auto px-4 max-w-none
-           grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
-           gap-8 my-10">
+<div class="mx-auto max-w-6xl px-4
+            grid grid-cols-1 md:grid-cols-2
+            gap-8 my-10">
 
- {{ range $pages }}
- <div class="w-full h-full
-             bg-white dark:bg-gray-900 p-5 rounded-xl
-             shadow-md hover:shadow-xl
-             transition-all duration-200">
+  {{ range $pages }}
+  <div class="w-full h-full
+              bg-white dark:bg-gray-900 p-5 rounded-xl
+              shadow-md hover:shadow-xl
+              transition-all duration-200">
 
-   {{ with .Params.featured_image }}
-     <img src="{{ . }}"
-          class="w-full h-44 object-cover rounded-md mb-3
-                 hover:opacity-90 transition"
-          loading="lazy">
-   {{ end }}
+    {{ with .Params.featured_image }}
+      <img src="{{ . }}"
+           class="w-full h-44 object-cover rounded-md mb-3
+                  hover:opacity-90 transition"
+           loading="lazy">
+    {{ end }}
 
-   {{/* 제목: 폰트 한 단계 줄이고, 너무 넓게 안 벌어지게 leading도 살짝 줄임 */}}
-   <h3 class="text-lg font-semibold leading-snug">
-     <a href="{{ .RelPermalink }}" class="hover:text-blue-600">
-       {{ .Title }}
-     </a>
-   </h3>
+    {{/* 제목: h 태그 쓰지 말고 p로, 폰트도 많이 줄이기 */}}
+    <p class="text-base md:text-lg font-semibold leading-snug">
+      <a href="{{ .RelPermalink }}" class="hover:text-blue-600">
+        {{ .Title }}
+      </a>
+    </p>
 
-   {{ with .Params.publication }}
-     <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
-       {{ . }}
-     </p>
-   {{ end }}
+    {{ with .Params.publication }}
+      <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+        {{ . }}
+      </p>
+    {{ end }}
 
-   {{ with .Params.summary }}
-     <p class="text-sm mt-3 opacity-90">
-       {{ . }}
-     </p>
-   {{ end }}
+    {{ with .Params.summary }}
+      <p class="text-sm mt-3 opacity-90">
+        {{ . }}
+      </p>
+    {{ end }}
 
-   {{ with .Params.tags }}
-     <div class="flex flex-wrap gap-2 mt-3">
-       {{ range . }}
-       <span class="px-2 py-1 text-xs rounded
-                    bg-blue-100 text-blue-700
-                    dark:bg-blue-800 dark:text-blue-100">
-         {{ . }}
-       </span>
-       {{ end }}
-     </div>
-   {{ end }}
+    {{ with .Params.tags }}
+      <div class="flex flex-wrap gap-2 mt-3">
+        {{ range . }}
+        <span class="px-2 py-1 text-xs rounded
+                     bg-blue-100 text-blue-700
+                     dark:bg-blue-800 dark:text-blue-100">
+          {{ . }}
+        </span>
+        {{ end }}
+      </div>
+    {{ end }}
 
- </div>
- {{ end }}
+  </div>
+  {{ end }}
 
 </div>
 
