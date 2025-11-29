@@ -7,7 +7,7 @@
 
 {{/* 2) 날짜 기준 내림차순 정렬 후 상위 6개만 */}}
 {{ $pages = sort $pages "Date" "desc" }}
-{{ $pages = first 6 $pages }}
+{{ $pages = first 3 $pages }}
 
 {{ if not (gt (len $pages) 0) }}
  <p class="text-sm text-gray-500 dark:text-gray-400">
