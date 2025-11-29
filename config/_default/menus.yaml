@@ -4,9 +4,5 @@ main:
     weight: 10
 
   - name: Publications
-    pageRef: publications   # 파일 이름(publications.md)과 맞추기
+    url: '/pubs/'      # 또는 pageRef: pubs 도 가능
     weight: 20
-
-  # - name: CV
-  #   url: '/cv/'
-  #   weight: 30
