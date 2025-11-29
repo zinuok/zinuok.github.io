@@ -29,8 +29,16 @@
                shadow-md hover:shadow-xl
                transition-all duration-200">
 
-     {{ with .Params.image }}
-       <img src="{{ . }}"
+     {{/* 페이지 리소스에서 feature/featured가 들어간 이미지 우선 선택 */}}
+     {{ $images := .Resources.ByType "image" }}
+     {{ $img := $images.GetMatch "*feature*" }}
+     {{ if and (not $img) (gt (len $images) 0) }}
+       {{/* feature.* 없으면 첫 번째 이미지라도 사용 */}}
+       {{ $img = index $images 0 }}
+     {{ end }}
+
+     {{ with $img }}
+       <img src="{{ .RelPermalink }}"
             class="w-full h-40 object-cover rounded-md mb-3
                    hover:opacity-90 transition"
             loading="lazy">
