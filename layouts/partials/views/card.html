@@ -1,41 +1,53 @@
-<!-- {{/* Custom 3-column card grid for publications */}}
+{{/* layouts/partials/views/card.html
+  홈의 collection 블록이나 다른 곳에서 `view: card` 를 쓸 때
+  한 개의 페이지(. = 하나의 논문/글)에 대해 카드 한 장을 그립니다. */}}
 
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-6">
+{{ $page := . }}
 
-  {{ range .Pages }}
-  <a href="{{ .RelPermalink }}" class="block group bg-white dark:bg-gray-900 p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-200">
+<div class="w-full h-full
+         bg-white dark:bg-gray-900 p-6 rounded-xl
+         shadow-md hover:shadow-xl
+         transition-all duration-200">
 
-    {{ with .Params.featured_image }}
-    <img src="{{ . }}" class="w-full h-40 object-cover rounded-lg mb-3 group-hover:opacity-90 transition">
-    {{ end }}
-
-    <h3 class="text-lg font-semibold leading-tight group-hover:text-blue-500">
-      {{ .Title }}
-    </h3>
-
-    <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
-      {{ .Params.publication }}
-    </p>
-
-    {{ with .Params.summary }}
-    <p class="text-sm mt-2 opacity-90">{{ . }}</p>
-    {{ end }}
-
-    <div class="flex flex-wrap gap-1 mt-3">
-      {{ range .Params.tags }}
-      <span class="px-2 py-0.5 text-xs rounded bg-blue-100 text-blue-700 dark:bg-blue-800 dark:text-blue-200">
-        {{ . }}
-      </span>
-      {{ end }}
-    </div>
-
-  </a>
-  {{ end }}
-
-</div> -->
-
-{{ range .Pages }}
-<div style="border:1px solid red;padding:10px;margin:10px;">
-  <h3>{{ .Title }}</h3>
-</div>
+{{/* 썸네일 이미지가 있으면 */}}
+{{ with $page.Params.featured_image }}
+ <img src="{{ . }}"
+      class="w-full h-48 object-cover rounded-md mb-4
+             hover:opacity-90 transition"
+      loading="lazy">
 {{ end }}
+
+<h3 class="text-xl font-semibold leading-tight">
+ <a href="{{ $page.RelPermalink }}" class="hover:text-blue-600">
+   {{ $page.Title }}
+ </a>
+</h3>
+
+{{/* publication(학회/저널 이름) 있으면 */}}
+{{ with $page.Params.publication }}
+ <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+   {{ . }}
+ </p>
+{{ end }}
+
+{{/* summary 있으면 */}}
+{{ with $page.Params.summary }}
+ <p class="text-sm mt-3 opacity-90">
+   {{ . }}
+ </p>
+{{ end }}
+
+{{/* 태그 배지들 */}}
+{{ with $page.Params.tags }}
+ <div class="flex flex-wrap gap-2 mt-3">
+   {{ range . }}
+     <span class="px-2 py-1 text-xs rounded
+                  bg-blue-100 text-blue-700
+                  dark:bg-blue-800 dark:text-blue-100">
+       {{ . }}
+     </span>
+   {{ end }}
+ </div>
+{{ end }}
+
+</div>
