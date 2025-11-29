@@ -5,9 +5,9 @@
 {{ $pages := where site.RegularPages "Section" "publication" }}
 {{ $pages = where $pages "Params.featured" true }}
 
-{{/* 2) 날짜 기준 내림차순 정렬 후 상위 4개만 */}}
+{{/* 2) 날짜 기준 내림차순 정렬 후 상위 6개만 */}}
 {{ $pages = sort $pages "Date" "desc" }}
-{{ $pages = first 4 $pages }}
+{{ $pages = first 6 $pages }}
 
 {{ if not (gt (len $pages) 0) }}
  <p class="text-sm text-gray-500 dark:text-gray-400">
@@ -15,31 +15,32 @@
  </p>
 {{ else }}
 
-<div class="mx-auto max-w-6xl px-4
+<div class="mx-auto px-4 max-w-none
            grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
            gap-8 my-10">
 
  {{ range $pages }}
  <div class="w-full h-full
-             bg-white dark:bg-gray-900 p-6 rounded-xl
+             bg-white dark:bg-gray-900 p-5 rounded-xl
              shadow-md hover:shadow-xl
              transition-all duration-200">
 
    {{ with .Params.featured_image }}
      <img src="{{ . }}"
-          class="w-full h-48 object-cover rounded-md mb-4
+          class="w-full h-44 object-cover rounded-md mb-3
                  hover:opacity-90 transition"
           loading="lazy">
    {{ end }}
 
-   <h3 class="text-xl font-semibold leading-tight">
+   {{/* 제목: 폰트 한 단계 줄이고, 너무 넓게 안 벌어지게 leading도 살짝 줄임 */}}
+   <h3 class="text-lg font-semibold leading-snug">
      <a href="{{ .RelPermalink }}" class="hover:text-blue-600">
        {{ .Title }}
      </a>
    </h3>
 
    {{ with .Params.publication }}
-     <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+     <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
        {{ . }}
      </p>
    {{ end }}
