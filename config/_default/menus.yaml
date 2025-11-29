@@ -4,5 +4,5 @@ main:
     weight: 10
 
   - name: Publications
-    pageRef: pubs     # pubs.md 파일 이름과 동일하게
+    pageRef: publication
     weight: 20
