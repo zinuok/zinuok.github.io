@@ -77,7 +77,7 @@ sections:
       sort_by: "Date"
       sort_ascending: false
     design:
-      view: "citation"  # 또는 "card" (기본 카드 뷰)
+      view: "card"  # 또는 "card" (기본 카드 뷰)
       columns: "3"
 
 
