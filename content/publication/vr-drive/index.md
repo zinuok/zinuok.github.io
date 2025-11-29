@@ -18,7 +18,7 @@ author_notes:
   - "Advisor"
 publication: "Conference on Neural Information Processing Systems (NeurIPS) 2025"
 publication_types: ["1"]
-date: 2025-12-01
+date: 2025-10-27
 url_pdf: "https://arxiv.org/abs/2510.23205"
 url_project: "https://vrdriveneurips.github.io/"
 summary: "An end-to-end autonomous driving framework that achieves viewpoint robustness by jointly learning feed-forward 3D Gaussian splatting for planning-aware view synthesis."
