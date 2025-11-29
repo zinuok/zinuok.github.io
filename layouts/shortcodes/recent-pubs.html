@@ -11,9 +11,9 @@
   </p>
 {{ else }}
 
-<div class="mx-auto max-w-6xl px-4
-            grid grid-cols-1 md:grid-cols-2
-            gap-8 my-10">
+<div class="mx-auto max-w-5xl px-4
+            grid grid-cols-1 lg:grid-cols-2
+            gap-6 my-10">
 
   {{ range $pages }}
   <div class="w-full h-full
@@ -23,13 +23,13 @@
 
     {{ with .Params.featured_image }}
       <img src="{{ . }}"
-           class="w-full h-44 object-cover rounded-md mb-3
+           class="w-full h-40 object-cover rounded-md mb-3
                   hover:opacity-90 transition"
            loading="lazy">
     {{ end }}
 
-    {{/* 제목: h 태그 쓰지 말고 p로, 폰트도 많이 줄이기 */}}
-    <p class="text-base md:text-lg font-semibold leading-snug">
+    {{/* 제목: 더 작게, h 태그는 안 쓰고 p로 */}}
+    <p class="text-sm md:text-base font-semibold leading-snug">
       <a href="{{ .RelPermalink }}" class="hover:text-blue-600">
         {{ .Title }}
       </a>
@@ -41,11 +41,7 @@
       </p>
     {{ end }}
 
-    {{ with .Params.summary }}
-      <p class="text-sm mt-3 opacity-90">
-        {{ . }}
-      </p>
-    {{ end }}
+    {{/* summary(요약)는 제거 */}}
 
     {{ with .Params.tags }}
       <div class="flex flex-wrap gap-2 mt-3">
