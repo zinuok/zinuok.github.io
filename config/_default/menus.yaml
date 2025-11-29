@@ -4,8 +4,7 @@ main:
     weight: 10
 
   - name: Publications
-    url: '#publications'   # ⬅ 홈 페이지 안의 id="publications" 섹션으로 점프
-    page_ref: '/'          # ⬅ 기준 페이지는 홈(/)
+    url: /publication/
     weight: 20
 
   - name: CV
