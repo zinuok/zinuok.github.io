@@ -43,5 +43,5 @@ profiles:
 ## Experience
 I am currently pursuing my Ph.D. at Korea Advanced Institute of Science and Technology (KAIST) under the supervision of Professor Kuk-Jin Yoon.
 - **2022.03 – Present** · Ph.D. student, Robotics, KAIST  
-- **2020.09 – 2022.02** · M.S. student, Robotics, KAIST  
-- **2016.03 – 2020.08** · B.S. student, Mechanical Engineering, KAIST  
+- **2020.09 – 2022.02** · M.S., Robotics, KAIST  
+- **2016.03 – 2020.08** · B.S., Mechanical Engineering, KAIST  
