@@ -8,7 +8,7 @@ author_notes: []
 publication: "IEEE Robotics and Automation Letters (RA-L) 2021, with presentation at IROS"
 publication_types: ["1"]
 date: 2021-01-15
-url_pdf: "https://ieeexplore.ieee.org/document/9444782"
+url_pdf: "https://ieeexplore.ieee.org/document/9479757"
 url_code: ""
 summary: "Event-based omnidirectional multi-view stereo method for wide field-of-view 3D reconstruction."
 tags: ["Event Camera", "Multi-View Stereo", "3D Reconstruction"]
