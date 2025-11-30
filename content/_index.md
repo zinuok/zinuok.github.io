@@ -164,6 +164,14 @@ sections:
             <strong>MBZIRC Final Team, December 2022</strong><br>
             Finalist team in the Mohamed Bin Zayed International Robotics Challenge (MBZIRC).
           </li>
+          <li>
+            <strong>Recipient of the KAIST KI Excellent Researcher Award, 2024</strong><br>
+            Awarded by KAIST KI to outstanding researchers with notable research achievements.
+          </li>
+          <li>
+            <strong>Qualcomm Innovation Fellowship (QIF) Finalist, 2025</strong><br>
+            Selected as a finalist for innovative PhD-level research proposals by Qualcomm, representing South Korea.
+          </li>
         </ul>
         </div>
     design:
