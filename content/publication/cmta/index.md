@@ -11,8 +11,8 @@ author_notes:
 publication: "European Conference on Computer Vision (ECCV) 2024"
 publication_types: ["1"]
 date: 2024-10-01
-url_pdf: ""
-url_code: "https://github.com/Chohoonhee/EHPT-XC"  # placeholder, update to CMTA repo if available
+url_pdf: "https://arxiv.org/abs/2408.14930"
+url_code: "https://github.com/intelpro/CMTA"  # placeholder, update to CMTA repo if available
 summary: "Event-guided video deblurring framework using cross-modal temporal alignment."
 tags: ["Event Camera", "Video Deblurring"]
 featured: false
