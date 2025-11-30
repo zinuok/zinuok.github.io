@@ -8,7 +8,7 @@ author_notes:
   - "Equal contribution"
   - "Equal contribution"
   - "Advisor"
-publication: "IEEE/CVF International Conference on Computer Vision (ICCV) 2025"
+publication: "IEEE/CVF International Conference on Computer Vision (ICCV) 2025, Highlight"
 publication_types: ["1"]
 date: 2025-10-01
 url_pdf: "https://openaccess.thecvf.com/content/ICCV2025/papers/Cho_Learning_Large_Motion_Estimation_from_Intermediate_Representations_with_a_High-Resolution_ICCV_2025_paper.pdf"
