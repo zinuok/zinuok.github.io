@@ -46,3 +46,23 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 {{ end }}
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // (YYYY). 형태 제거 (citation 문장 맨 앞)
+  const title = {{ .Params.title | jsonify }};
+  const year = {{ .Date.Format "2006" | jsonify }};
+
+  // title을 포함하는 문장(=citation)을 찾아서 맨 앞의 "(YYYY)."만 제거
+  const nodes = document.querySelectorAll('main p, main div, main span, article p, article div, article span');
+
+  nodes.forEach(el => {
+    const t = (el.textContent || '').trim();
+
+    // 예: "(2025). VR-Drive: ... "
+    if (t.startsWith(`(${year}).`) && t.includes(title)) {
+      el.textContent = t.replace(`(${year}).`, '').trimStart();
+    }
+  });
+});
+</script>
