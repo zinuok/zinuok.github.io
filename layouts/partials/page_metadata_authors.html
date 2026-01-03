@@ -1,15 +1,25 @@
-{{ $authors := .Params.authors }}
-{{ $notes := .Params.author_notes }}
+{{/* === ORIGINAL METADATA (저자 + 학회 제목 등) === */}}
+{{ partial "page_metadata_authors.html" . }}
 
+{{ with .Params.publication }}
+<div class="pub-publication">
+  {{ . | markdownify }}
+</div>
+{{ end }}
+
+{{/* === Equal contribution legend (맨 마지막) === */}}
 {{ $has_equal := false }}
-
-{{ range $notes }}
-  {{ if eq . "Equal contribution" }}
-    {{ $has_equal = true }}
+{{ with .Params.author_notes }}
+  {{ range . }}
+    {{ if eq . "Equal contribution" }}
+      {{ $has_equal = true }}
+    {{ end }}
   {{ end }}
 {{ end }}
 
-<span class="authors">
-{{ delimit $authors ", " }}
-{{ if $has_equal }} (* Equal contribution){{ end }}
-</span>
+{{ if $has_equal }}
+<div class="author-legend"
+     style="font-size: 0.85em; margin-top: 0.25em; line-height: 1.3;">
+  (* Equal contribution)
+</div>
+{{ end }}
