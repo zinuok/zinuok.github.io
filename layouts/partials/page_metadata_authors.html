@@ -1,25 +1,32 @@
-{{/* === ORIGINAL METADATA (저자 + 학회 제목 등) === */}}
-{{ partial "page_metadata_authors" . }}
+{{/* (기존 page_metadata_authors.html 내용은 그대로 두고) */}}
 
-{{ with .Params.publication }}
-<div class="pub-publication">
-  {{ . | markdownify }}
-</div>
-{{ end }}
-
-{{/* === Equal contribution legend (맨 마지막) === */}}
+{{/* --- Equal contribution legend (생성만 해두고) --- */}}
 {{ $has_equal := false }}
 {{ with .Params.author_notes }}
   {{ range . }}
-    {{ if eq . "Equal contribution" }}
-      {{ $has_equal = true }}
-    {{ end }}
+    {{ if eq . "Equal contribution" }}{{ $has_equal = true }}{{ end }}
   {{ end }}
 {{ end }}
 
 {{ if $has_equal }}
-<div class="author-legend"
-     style="font-size: 0.85em; margin-top: 0.25em; line-height: 1.3;">
+<div id="equal-contrib-legend" style="font-size:0.85em; margin-top:0.25em;">
   (* Equal contribution)
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const legend = document.getElementById('equal-contrib-legend');
+  if (!legend) return;
+
+  // 같은 메타데이터 블록 안에서 "학회 제목" 요소를 찾아서, 그 바로 뒤로 legend를 이동
+  const meta = legend.closest('.page-metadata, .article-metadata, .pub-publication, body');
+  const pub =
+    (meta && meta.querySelector && meta.querySelector('.pub-publication')) ||
+    document.querySelector('.pub-publication');
+
+  if (pub && pub.parentNode) {
+    pub.insertAdjacentElement('afterend', legend);
+  }
+});
+</script>
 {{ end }}
