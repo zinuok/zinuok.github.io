@@ -1,0 +1,13 @@
+{{ $authors := .Params.authors }}
+{{ $notes := .Params.author_notes }}
+
+{{ range $i, $a := $authors }}
+  <span class="author">
+    {{ $a }}
+
+    {{ with index $notes $i }}
+      {{ if eq . "Equal contribution" }}*{{ end }}
+      {{ if or (eq . "Advisor") (in . "Corresponding") }}✉{{ end }}
+    {{ end }}
+  </span>{{ if lt $i (sub (len $authors) 1) }}, {{ end }}
+{{ end }}
