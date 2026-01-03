@@ -1,0 +1,9 @@
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Bootstrap tooltip (BS5)
+  const els = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+  if (window.bootstrap && els.length) {
+    els.forEach(el => new bootstrap.Tooltip(el));
+  }
+});
+</script>
