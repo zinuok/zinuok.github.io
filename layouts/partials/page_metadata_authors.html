@@ -1,1 +1,15 @@
+{{ $authors := .Params.authors }}
+{{ $notes := .Params.author_notes }}
 
+{{ $has_equal := false }}
+
+{{ range $notes }}
+  {{ if eq . "Equal contribution" }}
+    {{ $has_equal = true }}
+  {{ end }}
+{{ end }}
+
+<span class="authors">
+{{ delimit $authors ", " }}
+{{ if $has_equal }} (* Equal contribution){{ end }}
+</span>
