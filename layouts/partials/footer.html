@@ -1,0 +1,11 @@
+{{ partial "footer/widget.html" . }}
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.bootstrap && window.bootstrap.Tooltip) {
+    document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el =>
+      new bootstrap.Tooltip(el)
+    );
+  }
+});
+</script>
