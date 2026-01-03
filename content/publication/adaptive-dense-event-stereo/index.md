@@ -4,7 +4,10 @@ authors:
   - "Hoonhee Cho"
   - "Jegyeong Cho"
   - "Kuk-Jin Yoon"
-author_notes: []
+author_notes:
+  - "Equal contribution"
+  - "Equal contribution"
+  - "Corresponding author"
 publication: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2023"
 publication_types: ["1"]
 date: 2023-06-01
