@@ -27,41 +27,36 @@
 <div id="equal-contrib-legend" style="font-size:0.85em; margin-top:0.25em; line-height:1.3;">
   (* Equal contribution)
 </div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const legend = document.getElementById('equal-contrib-legend');
-  if (!legend) return;
-
-  // publication(학회/저널) 라인 요소를 찾고, 그 다음 줄로 legend를 이동
-  const pub =
-    document.querySelector('.pub-publication') ||
-    document.querySelector('[class*="pub-publication"]');
-
-  if (pub && pub.parentNode) {
-    pub.insertAdjacentElement('afterend', legend);
-  } else {
-    // publication을 못 찾으면 (레이아웃 차이) 그냥 현재 위치(저자 아래)에 남겨둠
-  }
-});
-</script>
 {{ end }}
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  // (YYYY). 형태 제거 (citation 문장 맨 앞)
-  const title = {{ .Params.title | jsonify }};
-  const year = {{ .Date.Format "2006" | jsonify }};
+  // ---- move legend after publication line ----
+  const legend = document.getElementById('equal-contrib-legend');
+  if (legend) {
+    const pub =
+      document.querySelector('.pub-publication') ||
+      document.querySelector('[class*="pub-publication"]');
 
-  // title을 포함하는 문장(=citation)을 찾아서 맨 앞의 "(YYYY)."만 제거
-  const nodes = document.querySelectorAll('main p, main div, main span, article p, article div, article span');
+    if (pub && pub.parentNode) {
+      pub.insertAdjacentElement('afterend', legend);
+    }
+  }
 
-  nodes.forEach(el => {
+  // ---- remove leading "(YYYY)." (often rendered as its own node) ----
+  // 1) "(2025)." 처럼 '연도만' 들어있는 작은 요소 삭제
+  document.querySelectorAll('span, strong, em, p, div').forEach(el => {
     const t = (el.textContent || '').trim();
+    if (/^\(\d{4}\)\.\s*$/.test(t)) {
+      el.remove();
+    }
+  });
 
-    // 예: "(2025). VR-Drive: ... "
-    if (t.startsWith(`(${year}).`) && t.includes(title)) {
-      el.textContent = t.replace(`(${year}).`, '').trimStart();
+  // 2) 문장 시작이 "(2025). " 형태면 접두사만 제거
+  document.querySelectorAll('p, div, span').forEach(el => {
+    const t = (el.textContent || '').trim();
+    if (/^\(\d{4}\)\.\s+/.test(t)) {
+      el.textContent = t.replace(/^\(\d{4}\)\.\s+/, '');
     }
   });
 });
