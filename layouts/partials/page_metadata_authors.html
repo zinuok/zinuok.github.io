@@ -31,33 +31,39 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  // ---- move legend after publication line ----
+  // ---- move legend after publication line (if present) ----
   const legend = document.getElementById('equal-contrib-legend');
   if (legend) {
     const pub =
       document.querySelector('.pub-publication') ||
       document.querySelector('[class*="pub-publication"]');
-
-    if (pub && pub.parentNode) {
-      pub.insertAdjacentElement('afterend', legend);
-    }
+    if (pub && pub.parentNode) pub.insertAdjacentElement('afterend', legend);
   }
 
-  // ---- remove leading "(YYYY)." (often rendered as its own node) ----
-  // 1) "(2025)." 처럼 '연도만' 들어있는 작은 요소 삭제
-  document.querySelectorAll('span, strong, em, p, div').forEach(el => {
-    const t = (el.textContent || '').trim();
-    if (/^\(\d{4}\)\.\s*$/.test(t)) {
-      el.remove();
+  // ---- remove "(YYYY)." that appears right before the title link ----
+  // Works even if it's not at the start of the paragraph (e.g., "Advisor ... (2025). <a>Title</a> ...")
+  document.querySelectorAll('a[href*="/publication/"]').forEach(a => {
+    const p = a.parentNode;
+    if (!p) return;
+
+    // Look at text nodes right before the anchor
+    let n = a.previousSibling;
+    while (n) {
+      if (n.nodeType === Node.TEXT_NODE) {
+        // remove any occurrences of "(YYYY)." in that text node
+        n.textContent = n.textContent.replace(/\(\d{4}\)\.\s*/g, '');
+        // if the text becomes empty whitespace, keep going
+      }
+      // stop once we've passed a couple nodes (avoid touching far away text)
+      if (n.nodeType === Node.ELEMENT_NODE) break;
+      n = n.previousSibling;
     }
   });
 
-  // 2) 문장 시작이 "(2025). " 형태면 접두사만 제거
-  document.querySelectorAll('p, div, span').forEach(el => {
+  // ---- fallback: if some pages render "(YYYY)." as its own tiny element ----
+  document.querySelectorAll('span, strong, em').forEach(el => {
     const t = (el.textContent || '').trim();
-    if (/^\(\d{4}\)\.\s+/.test(t)) {
-      el.textContent = t.replace(/^\(\d{4}\)\.\s+/, '');
-    }
+    if (/^\(\d{4}\)\.\s*$/.test(t)) el.remove();
   });
 });
 </script>
