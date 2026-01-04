@@ -1,7 +1,3 @@
-{{/* =========================
-   Authors (keep it simple)
-   ========================= */}}
-
 {{ $authors := .Params.authors }}
 
 {{ if $authors }}
@@ -11,10 +7,6 @@
   {{ end }}
 </div>
 {{ end }}
-
-{{/* =========================
-   Equal contribution legend (create)
-   ========================= */}}
 
 {{ $has_equal := false }}
 {{ with .Params.author_notes }}
@@ -40,27 +32,26 @@ document.addEventListener('DOMContentLoaded', function () {
     if (pub && pub.parentNode) pub.insertAdjacentElement('afterend', legend);
   }
 
-  // ---- remove "(YYYY)." that appears right before the title link ----
-  // Works even if it's not at the start of the paragraph (e.g., "Advisor ... (2025). <a>Title</a> ...")
+  // ---- remove "(YYYY)." right before the title link ----
   document.querySelectorAll('a[href*="/publication/"]').forEach(a => {
-    const p = a.parentNode;
-    if (!p) return;
-
-    // Look at text nodes right before the anchor
     let n = a.previousSibling;
     while (n) {
       if (n.nodeType === Node.TEXT_NODE) {
-        // remove any occurrences of "(YYYY)." in that text node
         n.textContent = n.textContent.replace(/\(\d{4}\)\.\s*/g, '');
-        // if the text becomes empty whitespace, keep going
       }
-      // stop once we've passed a couple nodes (avoid touching far away text)
       if (n.nodeType === Node.ELEMENT_NODE) break;
       n = n.previousSibling;
     }
   });
 
-  // ---- fallback: if some pages render "(YYYY)." as its own tiny element ----
+  // ---- add line break between Title and Publication ----
+  document.querySelectorAll('a[href*="/publication/"]').forEach(a => {
+    if (a.nextSibling && a.nextSibling.nodeName === 'BR') return;
+    const br = document.createElement('br');
+    a.insertAdjacentElement('afterend', br);
+  });
+
+  // ---- fallback: remove tiny element that is exactly "(YYYY)." ----
   document.querySelectorAll('span, strong, em').forEach(el => {
     const t = (el.textContent || '').trim();
     if (/^\(\d{4}\)\.\s*$/.test(t)) el.remove();
