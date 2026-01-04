@@ -4,50 +4,60 @@
 
 {{ $page := . }}
 
+{{/* ---- helper: remove leading "(YYYY)." ---- */}}
+{{ $cleanPrefix := func (s string) string { return (replaceRE `^\(\d{4}\)\.\s*` "" s) } }}
+
 <div class="w-full h-full
          bg-white dark:bg-gray-900 p-6 rounded-xl
          shadow-md hover:shadow-xl
          transition-all duration-200">
 
-{{/* 썸네일 이미지가 있으면 */}}
-{{ with $page.Params.featured_image }}
- <img src="{{ . }}"
-      class="w-full h-48 object-cover rounded-md mb-4
-             hover:opacity-90 transition"
-      loading="lazy">
-{{ end }}
+  {{/* 썸네일 이미지가 있으면 */}}
+  {{ with $page.Params.featured_image }}
+    <img src="{{ . }}"
+         class="w-full h-48 object-cover rounded-md mb-4
+                hover:opacity-90 transition"
+         loading="lazy">
+  {{ end }}
 
-<h3 class="text-xl font-semibold leading-tight">
- <a href="{{ $page.RelPermalink }}" class="hover:text-blue-600">
-   {{ $page.Title }}
- </a>
-</h3>
+  {{/* 제목 */}}
+  {{ $title := $page.Title | plainify }}
+  {{ $title = replaceRE `^\(\d{4}\)\.\s*` "" $title }}
+  <h3 class="text-xl font-semibold leading-tight">
+    <a href="{{ $page.RelPermalink }}" class="hover:text-blue-600">
+      {{ $title }}
+    </a>
+  </h3>
 
-{{/* publication(학회/저널 이름) 있으면 */}}
-{{ with $page.Params.publication }}
- <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
-   {{ . }}
- </p>
-{{ end }}
+  {{/* publication(학회/저널 이름) 있으면 */}}
+  {{ with $page.Params.publication }}
+    {{ $pub := . | plainify }}
+    {{ $pub = replaceRE `^\(\d{4}\)\.\s*` "" $pub }}
+    <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+      {{ $pub }}
+    </p>
+  {{ end }}
 
-{{/* summary 있으면 */}}
-{{ with $page.Params.summary }}
- <p class="text-sm mt-3 opacity-90">
-   {{ . }}
- </p>
-{{ end }}
+  {{/* summary 있으면 */}}
+  {{ with $page.Params.summary }}
+    {{ $sum := . | plainify }}
+    {{ $sum = replaceRE `^\(\d{4}\)\.\s*` "" $sum }}
+    <p class="text-sm mt-3 opacity-90">
+      {{ $sum }}
+    </p>
+  {{ end }}
 
-{{/* 태그 배지들 */}}
-{{ with $page.Params.tags }}
- <div class="flex flex-wrap gap-2 mt-3">
-   {{ range . }}
-     <span class="px-2 py-1 text-xs rounded
-                  bg-blue-100 text-blue-700
-                  dark:bg-blue-800 dark:text-blue-100">
-       {{ . }}
-     </span>
-   {{ end }}
- </div>
-{{ end }}
+  {{/* 태그 배지들 */}}
+  {{ with $page.Params.tags }}
+    <div class="flex flex-wrap gap-2 mt-3">
+      {{ range . }}
+        <span class="px-2 py-1 text-xs rounded
+                     bg-blue-100 text-blue-700
+                     dark:bg-blue-800 dark:text-blue-100">
+          {{ . }}
+        </span>
+      {{ end }}
+    </div>
+  {{ end }}
 
 </div>
