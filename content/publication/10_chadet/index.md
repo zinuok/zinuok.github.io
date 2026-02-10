@@ -26,7 +26,7 @@ image:
 
 summary: "An unsupervised lightweight transformer for depth completion that fuses RGB and sparse depth using depthwise blocks and a cross-hierarchical-attention decoder to improve edge fidelity with low memory and real-time inference."
 tags: ["Depth Completion", "Unsupervised Learning", "Transformer"]
-featured: false
+featured: true
 reading_time: false
 profile: false
 show_date: false

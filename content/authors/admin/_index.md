@@ -21,7 +21,7 @@ profiles:
     label: "Google Scholar"
 
   - icon: "brands/linkedin"
-    url: "www.linkedin.com/in/jinwoo-jeon-a522413aa"
+    url: "https://www.linkedin.com/in/jinwoo-jeon-a522413aa"
     label: "LinkedIn"
 
   - icon: "at-symbol"

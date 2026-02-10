@@ -24,7 +24,7 @@ image:
 
 summary: "An unsupervised depth completion method that leverages line features from visual SLAM via constrained Delaunay triangulation and a mesh depth refinement module to produce dense, edge-consistent depth maps."
 tags: ["Depth Completion", "Unsupervised Learning", "Visual SLAM", "Line Features"]
-featured: false
+featured: true
 reading_time: false
 profile: false
 show_date: false

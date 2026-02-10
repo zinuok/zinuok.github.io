@@ -22,7 +22,7 @@ image:
 
 summary: "An unconstrained line-based visual SLAM system that leverages vanishing point measurements to resolve line degeneracy and guarantee observability for accurate structural mapping."
 tags: ["Visual SLAM", "Line Features", "Vanishing Points", "Structural Mapping"]
-featured: false
+featured: true
 reading_time: false
 profile: false
 show_date: false

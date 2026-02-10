@@ -26,7 +26,7 @@ image:
   
 summary: "Comprehensive benchmarking of visual(-inertial) odometry algorithms on various NVIDIA Jetson platforms, evaluating accuracy and computational efficiency."
 tags: ["Visual Odometry", "Visual-Inertial Odometry", "Embedded Systems", "UAV", "Benchmarking", "NVIDIA Jetson"]
-featured: false
+featured: true
 reading_time: false
 profile: false
 show_date: false
