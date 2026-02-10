@@ -91,6 +91,20 @@ sections:
       view: citation
 
 
+      
+  # - block: markdown
+  #   content:
+  #     title: '🛠️ Projects'
+  #     subtitle: ''
+  #     text: |-
+  #       <div class="text-sm leading-relaxed">
+  #         I have been serving the research community as a reviewer for:
+
+  #         <ul class="list-disc ml-6">
+  #           <li>2024 · IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</li>
+  #         </ul>
+  #       </div>
+
 
   
       
