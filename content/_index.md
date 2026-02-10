@@ -71,8 +71,12 @@ sections:
       subtitle: ""
       text: '{{< recent-pubs >}}'
 
-
-
+  - block: markdown
+    id: projects
+    content:
+      title: "Projects"
+      subtitle: ""
+      text: '{{< projects-cards >}}'
 
   - block: collection
     content:

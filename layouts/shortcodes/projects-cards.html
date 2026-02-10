@@ -1,0 +1,93 @@
+{{/* layouts/shortcodes/projects-cards.html
+    홈에서 projects 섹션의 모든 페이지를
+    화면 전체 폭을 쓰는 3열 카드 그리드로 보여주는 쇼트코드 */}}
+
+{{ $pages := where site.RegularPages "Section" "projects" }}
+{{ $pages = sort $pages "Date" "desc" }}
+
+{{ if not (gt (len $pages) 0) }}
+
+ <p class="text-sm text-gray-500 dark:text-gray-400">
+   No projects found.
+ </p>
+
+{{ else }}
+
+{{/* 부모의 max-width를 뚫고 화면 전체 폭 사용 */}}
+<div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
+
+ <div class="mx-auto max-w-7xl px-6 lg:px-12
+             grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
+             gap-8 my-10">
+
+   {{ range $pages }}
+
+   <div class="w-full h-full
+               bg-white dark:bg-gray-900 p-5 rounded-xl
+               shadow-md hover:shadow-xl
+               transition-all duration-200">
+
+     {{/* 페이지 리소스에서 feature/featured가 들어간 이미지 우선 선택 */}}
+     {{ $images := .Resources.ByType "image" }}
+     {{ $img := $images.GetMatch "*feature*" }}
+     {{ if and (not $img) (gt (len $images) 0) }}
+       {{ $img = index $images 0 }}
+     {{ end }}
+
+     {{ with $img }}
+       <img src="{{ .RelPermalink }}"
+            class="w-full h-50 object-cover rounded-md mb-3
+                   hover:opacity-90 transition"
+            loading="lazy">
+     {{ end }}
+
+     {{/* 제목 */}}
+     <p class="text-sm md:text-base font-semibold leading-snug">
+       <a href="{{ .RelPermalink }}"
+          class="no-underline hover:underline hover:text-blue-600">
+         {{ .Title }}
+       </a>
+     </p>
+
+     {{/* 요약 (Summary 또는 Description) */}}
+     {{ with .Summary }}
+       <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-3">
+         {{ . | plainify | truncate 120 }}
+       </p>
+     {{ end }}
+
+     {{/* 태그 */}}
+     {{ with .Params.tags }}
+       <div class="flex flex-wrap gap-1.5 mt-2">
+         {{ range . }}
+           <span class="text-[0.65rem] px-2 py-0.5 rounded-full
+                        bg-gray-100 dark:bg-gray-800
+                        text-gray-600 dark:text-gray-400">
+             {{ . }}
+           </span>
+         {{ end }}
+       </div>
+     {{ end }}
+
+     {{/* 링크 */}}
+     {{ with .Params.links }}
+       <div class="flex flex-wrap gap-2 mt-3">
+         {{ range . }}
+           <a href="{{ .url }}" target="_blank" rel="noopener"
+              class="text-[0.7rem] text-blue-600 dark:text-blue-400
+                     hover:underline no-underline">
+             {{ if eq .type "site" }}GitHub{{ else }}{{ .type | title }}{{ end }}
+           </a>
+         {{ end }}
+       </div>
+     {{ end }}
+
+   </div>
+
+   {{ end }}
+
+ </div>
+
+</div>
+
+{{ end }}
