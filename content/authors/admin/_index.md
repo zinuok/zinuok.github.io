@@ -8,7 +8,7 @@ role: "Ph.D. Student"
 
 avatar: "avatar.jpg"
 
-email: "gnsgnsgml@kaist.ac.kr"
+email: "zinuok@kaist.ac.kr"
 
 
 profiles:
@@ -31,17 +31,19 @@ profiles:
 
 ---
 ## Research Interests
-- **Video & Image Enhancement**
-  - Image/Video Deblurring  
-  - Video Frame Interpolation  
-- **Autonomous Driving**
-  - Stereo Matching, Semantic Segmentation, Object Detection
-  - End-to-end Autonomous Driving  
-- **Event Camera**
-  - Application of Event Camera for Various Tasks  
+- **Visual SLAM**
+  - Monocular and Multi-view visual SLAM  
+  - Learning-based SLAM
+  - Visual-Inertial Sensor Fusion
+- **3D Perception for Robotics Vision**
+  - Depth Estimation, Depth Completion
+  - Dense 3D Reconstruction from Images
+  - Foundation Models for 3D Understanding
+- **Proprioceptive Sensor-based Odometry**
+  - Deep Inertial Odometry
 
 ## Education
-I am currently pursuing my Ph.D. at Korea Advanced Institute of Science and Technology (KAIST) under the supervision of Professor Hyung Myung.
+I am currently pursuing my Ph.D. at Korea Advanced Institute of Science and Technology (KAIST) under the supervision of Professor Hyun Myung.
 - **2023.02 – Present** · Ph.D. student, Electrical Engineering, KAIST  
 - **2021.03 – 2023.02** · M.S., Electrical Engineering, KAIST  
 - **2016.03 – 2021.02** · B.S., Electrical Engineering & School of Computing (*minor major), KAIST  
