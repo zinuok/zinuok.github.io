@@ -5,7 +5,7 @@ authors:
   - "Sungwook Jung*"
   - "Eungchang Lee"
   - "Duckyu Choi"
-  - "Hyun Myung"
+  - "Hyun Myung†"
 author_notes:
   - "Equal contribution"
   - "Equal contribution"
