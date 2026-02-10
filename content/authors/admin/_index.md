@@ -21,7 +21,7 @@ profiles:
     label: "Google Scholar"
 
   - icon: "brands/linkedin"
-    url: "https://www.linkedin.com/in/hoonheecho"
+    url: "www.linkedin.com/in/jinwoo-jeon-a522413aa"
     label: "LinkedIn"
 
   - icon: "at-symbol"
@@ -40,8 +40,8 @@ profiles:
 - **Event Camera**
   - Application of Event Camera for Various Tasks  
 
-## Experience
+## Education
 I am currently pursuing my Ph.D. at Korea Advanced Institute of Science and Technology (KAIST) under the supervision of Professor Hyung Myung.
-- **2022.03 – Present** · Ph.D. student, Robotics, KAIST  
-- **2020.09 – 2022.02** · M.S., Robotics, KAIST  
-- **2016.03 – 2020.08** · B.S., Mechanical Engineering, KAIST  
+- **2023.02 – Present** · Ph.D. student, Electrical Engineering, KAIST  
+- **2021.03 – 2023.02** · M.S., Electrical Engineering, KAIST  
+- **2016.03 – 2021.02** · B.S., Electrical Engineering & School of Computing (*minor major), KAIST  
