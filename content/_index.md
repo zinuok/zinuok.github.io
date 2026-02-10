@@ -103,81 +103,45 @@ sections:
           I have been serving the research community as a reviewer for:
 
           <ul class="list-disc ml-6">
-            <li>2021 · IEEE Transactions on Instrumentation & Measurement</li>
-            <li>2023 · AAAI Conference on Artificial Intelligence (AAAI)</li>
-            <li>2023 · International Conference on Computer Vision (ICCV)</li>
-            <li>2024 · AAAI Conference on Artificial Intelligence (AAAI)</li>
             <li>2024 · IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</li>
-            <li>2024 · IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</li>
-            <li>2024 · European Conference on Computer Vision (ECCV)</li>
-            <li>2025 · AAAI Conference on Artificial Intelligence (AAAI)</li>
-            <li>2025 · IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</li>
-            <li>2025 · IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</li>
-            <li>2025 · International Conference on Computer Vision (ICCV) (Outstanding Reviewers)</li>
-            <li>2025 · Conference on Neural Information Processing Systems (NeurIPS) (Top Reviewers)</li>
-            <li>2026 · AAAI Conference on Artificial Intelligence (AAAI)</li>
           </ul>
         </div>
 
+
+  # - block: markdown
+  #   content:
+  #     title: '🏅 Honors & News'
+  #     subtitle: ''
   #     text: |-
   #       <div style="font-size:1.0rem;">
-  #       I have been serving the research community as a reviewer for:
-
-  #       <ul style="list-style-position: outside; padding-left: 1.5rem; white-space: nowrap;">
-  #         <li>2021 · IEEE Transactions on Instrumentation & Measurement</li>
-  #         <li>2023 · AAAI Conference on Artificial Intelligence (AAAI)</li>
-  #         <li>2023 · International Conference on Computer Vision (ICCV)</li>
-  #         <li>2024 · AAAI Conference on Artificial Intelligence (AAAI)</li>
-  #         <li>2024 · IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</li>
-  #         <li>2024 · IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</li>
-  #         <li>2024 · European Conference on Computer Vision (ECCV)</li>
-  #         <li>2025 · AAAI Conference on Artificial Intelligence (AAAI)</li>
-  #         <li>2025 · IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</li>
-  #         <li>2025 · IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</li>
-  #         <li>2025 · International Conference on Computer Vision (ICCV) (Outstanding Reviewers)</li>
-  #         <li>2025 · Conference on Neural Information Processing Systems (NeurIPS) (Top Reviewers)</li>
-  #         <li>2026 · AAAI Conference on Artificial Intelligence (AAAI)</li>
+  #       <ul style="list-style-position: outside; padding-left: 1.5rem;">
+  #         <li>
+  #           <strong>IEEE SPECTRUM News, August 2021</strong><br>
+  #           Event-based Omnidirectional Multi-view Stereo (EOMVS) was introduced in IEEE Spectrum,
+  #           “This Camera Can ‘See’ the Bigger Picture: Researchers’ new camera spots fast-moving objects over a wide angle of view.”
+  #         </li>
+  #         <li>
+  #           <strong>Vision Systems Design Main News, November 2021</strong><br>
+  #           EOMVS introduced as a main news article in Vision Systems Design.
+  #         </li>
+  #         <li>
+  #           <strong>MBZIRC Final Team, December 2022</strong><br>
+  #           Finalist team in the Mohamed Bin Zayed International Robotics Challenge (MBZIRC).
+  #         </li>
+  #         <li>
+  #           <strong>Recipient of the KAIST KI Excellent Researcher Award, 2024</strong><br>
+  #           Awarded by KAIST KI to outstanding researchers with notable research achievements.
+  #         </li>
+  #         <li>
+  #           <strong>Qualcomm Innovation Fellowship (QIF) Finalist, 2025</strong><br>
+  #           Selected as a finalist for innovative PhD-level research proposals by Qualcomm, representing South Korea.
+  #         </li>
   #       </ul>
   #       </div>
   #   design:
   #     columns: '1'
   #     spacing:
   #       padding: 0.5rem
-
-  - block: markdown
-    content:
-      title: '🏅 Honors & News'
-      subtitle: ''
-      text: |-
-        <div style="font-size:1.0rem;">
-        <ul style="list-style-position: outside; padding-left: 1.5rem;">
-          <li>
-            <strong>IEEE SPECTRUM News, August 2021</strong><br>
-            Event-based Omnidirectional Multi-view Stereo (EOMVS) was introduced in IEEE Spectrum,
-            “This Camera Can ‘See’ the Bigger Picture: Researchers’ new camera spots fast-moving objects over a wide angle of view.”
-          </li>
-          <li>
-            <strong>Vision Systems Design Main News, November 2021</strong><br>
-            EOMVS introduced as a main news article in Vision Systems Design.
-          </li>
-          <li>
-            <strong>MBZIRC Final Team, December 2022</strong><br>
-            Finalist team in the Mohamed Bin Zayed International Robotics Challenge (MBZIRC).
-          </li>
-          <li>
-            <strong>Recipient of the KAIST KI Excellent Researcher Award, 2024</strong><br>
-            Awarded by KAIST KI to outstanding researchers with notable research achievements.
-          </li>
-          <li>
-            <strong>Qualcomm Innovation Fellowship (QIF) Finalist, 2025</strong><br>
-            Selected as a finalist for innovative PhD-level research proposals by Qualcomm, representing South Korea.
-          </li>
-        </ul>
-        </div>
-    design:
-      columns: '1'
-      spacing:
-        padding: 0.5rem
 
 
 
