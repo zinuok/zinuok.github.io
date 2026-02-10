@@ -17,6 +17,13 @@ publication_types: ["1"]
 date: 2021-04-26
 url_pdf: "https://ieeexplore.ieee.org/abstract/document/9416140"
 url_code: "https://github.com/url-kaist/kaistviodataset"
+
+image:
+  placement: 3
+  filename: "feature.png"
+  caption: ""
+  focal_point: "Center"  
+  
 summary: "Comprehensive benchmarking of visual(-inertial) odometry algorithms on various NVIDIA Jetson platforms, evaluating accuracy and computational efficiency."
 tags: ["Visual Odometry", "Visual-Inertial Odometry", "Embedded Systems", "UAV", "Benchmarking", "NVIDIA Jetson"]
 featured: false
