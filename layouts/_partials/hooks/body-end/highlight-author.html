@@ -1,0 +1,17 @@
+<script>
+// Bold the site owner's name (Jinwoo Jeon) in the publication detail-page author list.
+// Detail-page authors are rendered inline by the theme's single.html via the authors
+// taxonomy (.group.inline-flex blocks), which has no template override point, so we
+// bold client-side here. List/card/citation views are handled server-side in templates.
+document.addEventListener('DOMContentLoaded', function () {
+  // Scope to publication pages only: the theme reuses this author markup on blog/event
+  // detail pages too. Match server-side `strings.Contains` so equal-contribution
+  // variants like "Jinwoo Jeon*" are highlighted consistently with the list/citation views.
+  if (!location.pathname.includes('/publication/')) return;
+  document.querySelectorAll('.group.inline-flex.items-center > div').forEach(function (el) {
+    if (el.textContent.trim().includes('Jinwoo Jeon')) {
+      el.style.fontWeight = '700';
+    }
+  });
+});
+</script>

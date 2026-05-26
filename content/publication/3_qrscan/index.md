@@ -3,7 +3,7 @@ title: "QR-SCAN: Traversable Region Scan for Quadruped Robot Exploration using L
 authors:
   - "EungChang Mason Lee"
   - "DongUk Seo"
-  - "JinWoo Jeon"
+  - "Jinwoo Jeon"
   - "Hyun Myung†"
 author_notes:
   - ""

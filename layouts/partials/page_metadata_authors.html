@@ -3,7 +3,7 @@
 {{ if $authors }}
 <div class="authors">
   {{ range $i, $a := $authors }}
-    <span class="author">{{ $a | markdownify }}</span>{{ if lt $i (sub (len $authors) 1) }}, {{ end }}
+    <span class="author">{{ if strings.Contains $a "Jinwoo Jeon" }}<strong>{{ $a | markdownify }}</strong>{{ else }}{{ $a | markdownify }}{{ end }}</span>{{ if lt $i (sub (len $authors) 1) }}, {{ end }}
   {{ end }}
 </div>
 {{ end }}

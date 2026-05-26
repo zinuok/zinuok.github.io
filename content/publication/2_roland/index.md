@@ -4,7 +4,7 @@ authors:
   - "ChanYoung Kim*"
   - "EungChang Mason Lee*"
   - "JunHo Choi"
-  - "JinWoo Jeon"
+  - "Jinwoo Jeon"
   - "SeokTae Kim"
   - "Hyun Myung†"
 author_notes:
