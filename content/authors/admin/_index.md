@@ -42,6 +42,12 @@ profiles:
 - **Proprioceptive Sensor-based Odometry**
   - Deep Inertial Odometry
 
+
+## Selected Honors
+- 1st Prize in the SLAM category of Hilti × Trimble Challenge’26 at IEEE ICRA 2026 (among 62 international teams) 
+
+
+
 ## Education
 I am currently pursuing my Ph.D. at Korea Advanced Institute of Science and Technology (KAIST) under the supervision of Professor Hyun Myung.
 - **2023.02 – Present** · Ph.D. student, Electrical Engineering, KAIST  
